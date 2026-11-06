@@ -549,5 +549,251 @@
   "risksSeverityMedium": "Medium",
   "risksSeverityLow": "Low",
   "risksLinkError": "Couldn't open the link.",
-  "risksAllAreas": "All areas"
+  "risksAllAreas": "All areas",
+  "settingsTitle": "Settings",
+  "settingsRatesSection": "Rates and assumptions",
+  "settingsProfileSubtitle": "{city} · v{version} · as of {date}",
+  "@settingsProfileSubtitle": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "version": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsRates": "Taxes, fees and charges",
+  "settingsLoan": "Loan assumptions",
+  "settingsDefaults": "Defaults by flat type",
+  "settingsThresholds": "Flag thresholds",
+  "settingsResetRates": "Reset rates to bundled",
+  "settingsResetRatesBody": "This saves the rates shipped with the app as a new version. Saved properties keep the version they were calculated with.",
+  "settingsResetDone": "Rates reset to bundled values",
+  "settingsRiskSection": "Scam and risk data",
+  "settingsRiskSubtitle": "Schema {version} · as of {date} · {source}",
+  "@settingsRiskSubtitle": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      },
+      "source": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsRiskBundled": "bundled",
+  "settingsRiskImported": "imported",
+  "settingsRiskImport": "Import risk data (JSON)",
+  "settingsRiskRestore": "Restore bundled risk data",
+  "settingsRiskRestored": "Bundled risk data restored",
+  "settingsBackupSection": "Backup",
+  "settingsExport": "Export all properties",
+  "settingsExportHelp": "Saves a JSON file you can keep or move to another phone.",
+  "settingsImport": "Import properties from backup",
+  "settingsImportHelp": "Adds the properties in a backup file. Existing ones are kept.",
+  "settingsImported": "{count, plural, =1{1 property imported} other{{count} properties imported}}",
+  "@settingsImported": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsAboutSection": "About",
+  "settingsPrivacy": "Your data stays on this phone",
+  "settingsPrivacyBody": "PropCheck works offline. It has no accounts, no analytics and makes no network requests. Properties are stored only on this device unless you export them.",
+  "backupInvalidJson": "This file isn't valid JSON.",
+  "backupNotABackup": "This isn't a PropCheck backup file.",
+  "backupNewerVersion": "This backup was made by a newer version of PropCheck. Update the app first.",
+  "backupDamaged": "The backup file is damaged and couldn't be read.",
+  "backupShareSubject": "PropCheck backup",
+  "editorTitle": "Edit rates",
+  "editorSaved": "Saved as version {version}",
+  "@editorSaved": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "editorAsOf": "Rates as of (YYYY-MM-DD)",
+  "editorInvalid": "Fix the highlighted fields first.",
+  "editorPctRange": "Enter a percentage between 0 and {max}",
+  "@editorPctRange": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "editorFractionRange": "Enter a value between 0 and 1",
+  "editorNonNegative": "Must be zero or more",
+  "editorRatioRange": "Enter a value between 1 and 3",
+  "editorDateFormat": "Use the format YYYY-MM-DD",
+  "editorDiscardTitle": "Discard changes?",
+  "editorDiscard": "Discard",
+  "editorVersionNote": "Saving creates version {version}. Saved properties keep their own version until you recalculate them.",
+  "@editorVersionNote": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "editorNoLimit": "No upper limit",
+  "groupStampRegistration": "Stamp duty and registration",
+  "groupGst": "GST",
+  "groupTds": "TDS",
+  "groupFees": "Fees and charges",
+  "groupMaintenance": "Maintenance",
+  "groupRenovation": "Renovation (₹ per sq ft by building age)",
+  "groupLoanRates": "Interest and eligibility",
+  "groupLoanTenure": "Tenure limits",
+  "groupLtv": "Loan-to-value slabs",
+  "groupInteriors": "Interiors budget",
+  "groupCarpet": "Typical carpet area",
+  "groupWizard": "Other pre-fills",
+  "groupThresholds": "When to raise flags",
+  "fieldStampMale": "Stamp duty, man (%)",
+  "fieldStampFemale": "Stamp duty, woman (%)",
+  "fieldStampJoint": "Stamp duty, joint (%)",
+  "fieldRegistrationPct": "Registration (%)",
+  "fieldRegistrationCap": "Registration cap (₹)",
+  "fieldGstUcStandard": "Under construction, standard (%)",
+  "fieldGstUcAffordable": "Under construction, affordable (%)",
+  "fieldGstReady": "Ready possession (%)",
+  "fieldGstResale": "Resale (%)",
+  "fieldAffordableSqm": "Affordable housing: max carpet (m²)",
+  "fieldAffordableValue": "Affordable housing: max value (₹)",
+  "fieldTdsPct": "TDS rate (%)",
+  "fieldTdsThreshold": "TDS applies from (₹)",
+  "fieldBrokerage": "Brokerage (%)",
+  "fieldServiceGst": "GST on services (%)",
+  "fieldTransferFee": "Society transfer fee (₹)",
+  "fieldLegal": "Lawyer fees (₹)",
+  "fieldLoanProcessing": "Loan processing fee (%)",
+  "fieldMortgagePct": "Stamp duty on loan (%)",
+  "fieldMortgageCap": "Stamp duty on loan, cap (₹)",
+  "fieldPreEmiFraction": "Average share of loan disbursed before possession (0–1)",
+  "fieldBuiltupRatio": "Built-up ÷ carpet ratio",
+  "fieldMaintenanceRate": "Maintenance (₹ per sq ft per month)",
+  "fieldMonthsUc": "Advance months, under construction",
+  "fieldMonthsReady": "Advance months, ready possession",
+  "fieldMonthsResale": "Advance months, resale",
+  "fieldRenovationBand": "Age {min}–{max} years (₹/sq ft)",
+  "@fieldRenovationBand": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "fieldInterest": "Interest rate (%)",
+  "fieldFoir": "Share of income for EMIs (%)",
+  "fieldHaircut": "Bank valuation haircut (%)",
+  "fieldMaxTenure": "Maximum tenure (years)",
+  "fieldRetireSalaried": "Retirement age, salaried",
+  "fieldRetireSelf": "Retirement age, self-employed",
+  "fieldBuildingLife": "Assumed building life (years)",
+  "fieldBuildingBuffer": "Building life buffer (years)",
+  "fieldLtvCap": "Slab {n}: up to (₹)",
+  "@fieldLtvCap": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "fieldLtvPct": "Slab {n}: loan-to-value (%)",
+  "@fieldLtvPct": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "fieldInteriorsType": "{type} (₹)",
+  "@fieldInteriorsType": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "fieldCarpetType": "{type} (sq ft)",
+  "@fieldCarpetType": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "fieldMonthsToPossession": "Months to possession",
+  "fieldBuyerAge": "Buyer age",
+  "fieldTenure": "Loan tenure (years)",
+  "fieldOldBuilding": "Old building from (years)",
+  "fieldVeryOldBuilding": "Very old building from (years)",
+  "fieldGstEdgeBand": "GST edge band above the limit (₹)",
+  "fieldHighLoading": "High loading above (%)",
+  "fieldBelowMarket": "Below-market ratio (0–1)",
+  "importTitle": "Import risk data",
+  "importHelp": "Paste the JSON from the survey prompt, or choose a file. It must follow schema 1.0.",
+  "importPasteLabel": "Risk data JSON",
+  "importChooseFile": "Choose file",
+  "importValidate": "Validate and import",
+  "importInvalidJson": "This is not valid JSON: {error}",
+  "@importInvalidJson": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "importProblems": "{count, plural, =1{1 problem found} other{{count} problems found}}",
+  "@importProblems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importRoot": "(whole file)",
+  "importDone": "Risk data imported (as of {date})",
+  "@importDone": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "importSnapshotTitle": "Update default rates?",
+  "importSnapshotBody": "This file includes rates as of {date}. Use them as your defaults? Saved properties keep their current rates until you recalculate.",
+  "@importSnapshotBody": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "importSnapshotApply": "Update rates",
+  "importSnapshotSkip": "Keep current rates",
+  "importSnapshotApplied": "Rates updated to version {version}",
+  "@importSnapshotApplied": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "importReadError": "Couldn't read that file."
 }
