@@ -48,3 +48,16 @@
 Totals include default interiors (₹2–6L by type), so they run higher than the plain cost guide.
 
 Rates as of 6 Nov 2026. Not legal or financial advice.
+
+## Running the app
+Requires Flutter stable (Dart 3).
+
+```bash
+flutter pub get
+dart run build_runner build --delete-conflicting-outputs
+flutter run            # on a connected Android device or iOS simulator
+flutter test
+flutter analyze
+```
+
+Release builds: `flutter build appbundle` (Android) and `flutter build ipa` (iOS, on macOS). See [Flutter docs](https://docs.flutter.dev/deployment) for signing.
