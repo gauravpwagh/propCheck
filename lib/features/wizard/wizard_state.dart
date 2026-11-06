@@ -83,6 +83,9 @@ abstract class WizardState with _$WizardState {
 
   const factory WizardState({
     required WizardDraft draft,
+
+    /// The profile version this draft is calculated with.
+    required RateProfile profile,
     @Default(WizardStep.mode) WizardStep step,
   }) = _WizardState;
 

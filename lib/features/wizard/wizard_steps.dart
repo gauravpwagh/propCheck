@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../app/providers.dart';
 import '../../core/widgets/number_fields.dart';
 import '../../domain/engine/engine.dart';
 import '../../l10n/gen/app_localizations.dart';
@@ -62,7 +61,7 @@ class WizardStepView extends ConsumerWidget {
     WizardDraft d,
   ) {
     final c = ref.read(wizardControllerProvider.notifier);
-    final p = ref.watch(activeProfileProvider).requireValue;
+    final p = ref.watch(wizardControllerProvider.select((s) => s.profile));
     final inp = d.input;
     const gap = SizedBox(height: 16);
     switch (step) {

@@ -1581,6 +1581,324 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Info'**
   String get severityInfo;
+
+  /// No description provided for @homeItemSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'{type} · {status}'**
+  String homeItemSubtitle(String type, String status);
+
+  /// No description provided for @homeItemPsf.
+  ///
+  /// In en, this message translates to:
+  /// **'{amount}/sq ft all-in'**
+  String homeItemPsf(String amount);
+
+  /// No description provided for @homeFlagCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 critical flag} other{{count} critical flags}}'**
+  String homeFlagCount(int count);
+
+  /// No description provided for @homeSelected.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} selected'**
+  String homeSelected(int count);
+
+  /// No description provided for @homeNoMatches.
+  ///
+  /// In en, this message translates to:
+  /// **'No properties match your search.'**
+  String get homeNoMatches;
+
+  /// No description provided for @homeSort.
+  ///
+  /// In en, this message translates to:
+  /// **'Sort'**
+  String get homeSort;
+
+  /// No description provided for @homeMaxPriceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Max price {price}'**
+  String homeMaxPriceLabel(String price);
+
+  /// No description provided for @detailRatesVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'Calculated with rates v{version} (as of {date})'**
+  String detailRatesVersion(int version, String date);
+
+  /// No description provided for @detailOutdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Rates have changed since this was saved (now v{version}).'**
+  String detailOutdated(int version);
+
+  /// No description provided for @detailRecalculate.
+  ///
+  /// In en, this message translates to:
+  /// **'Recalculate with current rates'**
+  String get detailRecalculate;
+
+  /// No description provided for @detailRecalculated.
+  ///
+  /// In en, this message translates to:
+  /// **'Recalculated with current rates'**
+  String get detailRecalculated;
+
+  /// No description provided for @detailDuplicate.
+  ///
+  /// In en, this message translates to:
+  /// **'Duplicate'**
+  String get detailDuplicate;
+
+  /// No description provided for @detailDuplicateSuffix.
+  ///
+  /// In en, this message translates to:
+  /// **' (copy)'**
+  String get detailDuplicateSuffix;
+
+  /// No description provided for @detailDuplicated.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy created'**
+  String get detailDuplicated;
+
+  /// No description provided for @detailDeleteTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete this property?'**
+  String get detailDeleteTitle;
+
+  /// No description provided for @detailDeleteBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Its inputs and checklist progress will be removed from this device. This can\'t be undone.'**
+  String get detailDeleteBody;
+
+  /// No description provided for @detailNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'This property no longer exists.'**
+  String get detailNotFound;
+
+  /// No description provided for @detailInputs.
+  ///
+  /// In en, this message translates to:
+  /// **'Your inputs'**
+  String get detailInputs;
+
+  /// No description provided for @detailInputsHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap a section to change it.'**
+  String get detailInputsHelp;
+
+  /// No description provided for @sectionMode.
+  ///
+  /// In en, this message translates to:
+  /// **'What you\'re working out'**
+  String get sectionMode;
+
+  /// No description provided for @sectionLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Location and name'**
+  String get sectionLocation;
+
+  /// No description provided for @sectionType.
+  ///
+  /// In en, this message translates to:
+  /// **'Flat type'**
+  String get sectionType;
+
+  /// No description provided for @sectionStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Stage'**
+  String get sectionStatus;
+
+  /// No description provided for @sectionAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Price or budget'**
+  String get sectionAmount;
+
+  /// No description provided for @sectionArea.
+  ///
+  /// In en, this message translates to:
+  /// **'Area'**
+  String get sectionArea;
+
+  /// No description provided for @sectionBuyer.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer'**
+  String get sectionBuyer;
+
+  /// No description provided for @sectionExtras.
+  ///
+  /// In en, this message translates to:
+  /// **'Builder extras'**
+  String get sectionExtras;
+
+  /// No description provided for @sectionMaintenance.
+  ///
+  /// In en, this message translates to:
+  /// **'Maintenance and society'**
+  String get sectionMaintenance;
+
+  /// No description provided for @sectionResale.
+  ///
+  /// In en, this message translates to:
+  /// **'Building details'**
+  String get sectionResale;
+
+  /// No description provided for @sectionUc.
+  ///
+  /// In en, this message translates to:
+  /// **'Project details'**
+  String get sectionUc;
+
+  /// No description provided for @sectionFinance.
+  ///
+  /// In en, this message translates to:
+  /// **'Home loan'**
+  String get sectionFinance;
+
+  /// No description provided for @sectionOneTime.
+  ///
+  /// In en, this message translates to:
+  /// **'One-time costs'**
+  String get sectionOneTime;
+
+  /// No description provided for @compareTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Compare'**
+  String get compareTitle;
+
+  /// No description provided for @compareNeedTwo.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick at least two properties to compare.'**
+  String get compareNeedTwo;
+
+  /// No description provided for @compareQuoted.
+  ///
+  /// In en, this message translates to:
+  /// **'Quoted price'**
+  String get compareQuoted;
+
+  /// No description provided for @compareTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Total'**
+  String get compareTotal;
+
+  /// No description provided for @compareOwnFunds.
+  ///
+  /// In en, this message translates to:
+  /// **'Cash you need'**
+  String get compareOwnFunds;
+
+  /// No description provided for @compareLoan.
+  ///
+  /// In en, this message translates to:
+  /// **'Probable loan'**
+  String get compareLoan;
+
+  /// No description provided for @compareEmi.
+  ///
+  /// In en, this message translates to:
+  /// **'EMI'**
+  String get compareEmi;
+
+  /// No description provided for @compareQuotedPsf.
+  ///
+  /// In en, this message translates to:
+  /// **'₹/sq ft quoted (carpet)'**
+  String get compareQuotedPsf;
+
+  /// No description provided for @compareAllInPsf.
+  ///
+  /// In en, this message translates to:
+  /// **'₹/sq ft all-in (carpet)'**
+  String get compareAllInPsf;
+
+  /// No description provided for @compareLoading.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading'**
+  String get compareLoading;
+
+  /// No description provided for @compareStamp.
+  ///
+  /// In en, this message translates to:
+  /// **'Stamp duty'**
+  String get compareStamp;
+
+  /// No description provided for @compareGst.
+  ///
+  /// In en, this message translates to:
+  /// **'GST'**
+  String get compareGst;
+
+  /// No description provided for @compareExtras.
+  ///
+  /// In en, this message translates to:
+  /// **'Builder extras'**
+  String get compareExtras;
+
+  /// No description provided for @compareBuildingAge.
+  ///
+  /// In en, this message translates to:
+  /// **'Building age'**
+  String get compareBuildingAge;
+
+  /// No description provided for @compareStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Stage'**
+  String get compareStatus;
+
+  /// No description provided for @compareFlags.
+  ///
+  /// In en, this message translates to:
+  /// **'Flags'**
+  String get compareFlags;
+
+  /// No description provided for @compareFlagSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'{critical} critical · {warning} warning · {info} info'**
+  String compareFlagSummary(int critical, int warning, int info);
+
+  /// No description provided for @compareChecklist.
+  ///
+  /// In en, this message translates to:
+  /// **'Checklist done'**
+  String get compareChecklist;
+
+  /// No description provided for @compareBest.
+  ///
+  /// In en, this message translates to:
+  /// **'Best value'**
+  String get compareBest;
+
+  /// No description provided for @compareCostSplit.
+  ///
+  /// In en, this message translates to:
+  /// **'Where the money goes'**
+  String get compareCostSplit;
+
+  /// No description provided for @compareYears.
+  ///
+  /// In en, this message translates to:
+  /// **'{years} yrs'**
+  String compareYears(int years);
 }
 
 class _AppLocalizationsDelegate

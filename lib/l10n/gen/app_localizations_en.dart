@@ -842,4 +842,188 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get severityInfo => 'Info';
+
+  @override
+  String homeItemSubtitle(String type, String status) {
+    return '$type · $status';
+  }
+
+  @override
+  String homeItemPsf(String amount) {
+    return '$amount/sq ft all-in';
+  }
+
+  @override
+  String homeFlagCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count critical flags',
+      one: '1 critical flag',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String homeSelected(int count) {
+    return '$count selected';
+  }
+
+  @override
+  String get homeNoMatches => 'No properties match your search.';
+
+  @override
+  String get homeSort => 'Sort';
+
+  @override
+  String homeMaxPriceLabel(String price) {
+    return 'Max price $price';
+  }
+
+  @override
+  String detailRatesVersion(int version, String date) {
+    return 'Calculated with rates v$version (as of $date)';
+  }
+
+  @override
+  String detailOutdated(int version) {
+    return 'Rates have changed since this was saved (now v$version).';
+  }
+
+  @override
+  String get detailRecalculate => 'Recalculate with current rates';
+
+  @override
+  String get detailRecalculated => 'Recalculated with current rates';
+
+  @override
+  String get detailDuplicate => 'Duplicate';
+
+  @override
+  String get detailDuplicateSuffix => ' (copy)';
+
+  @override
+  String get detailDuplicated => 'Copy created';
+
+  @override
+  String get detailDeleteTitle => 'Delete this property?';
+
+  @override
+  String get detailDeleteBody =>
+      'Its inputs and checklist progress will be removed from this device. This can\'t be undone.';
+
+  @override
+  String get detailNotFound => 'This property no longer exists.';
+
+  @override
+  String get detailInputs => 'Your inputs';
+
+  @override
+  String get detailInputsHelp => 'Tap a section to change it.';
+
+  @override
+  String get sectionMode => 'What you\'re working out';
+
+  @override
+  String get sectionLocation => 'Location and name';
+
+  @override
+  String get sectionType => 'Flat type';
+
+  @override
+  String get sectionStatus => 'Stage';
+
+  @override
+  String get sectionAmount => 'Price or budget';
+
+  @override
+  String get sectionArea => 'Area';
+
+  @override
+  String get sectionBuyer => 'Buyer';
+
+  @override
+  String get sectionExtras => 'Builder extras';
+
+  @override
+  String get sectionMaintenance => 'Maintenance and society';
+
+  @override
+  String get sectionResale => 'Building details';
+
+  @override
+  String get sectionUc => 'Project details';
+
+  @override
+  String get sectionFinance => 'Home loan';
+
+  @override
+  String get sectionOneTime => 'One-time costs';
+
+  @override
+  String get compareTitle => 'Compare';
+
+  @override
+  String get compareNeedTwo => 'Pick at least two properties to compare.';
+
+  @override
+  String get compareQuoted => 'Quoted price';
+
+  @override
+  String get compareTotal => 'Total';
+
+  @override
+  String get compareOwnFunds => 'Cash you need';
+
+  @override
+  String get compareLoan => 'Probable loan';
+
+  @override
+  String get compareEmi => 'EMI';
+
+  @override
+  String get compareQuotedPsf => '₹/sq ft quoted (carpet)';
+
+  @override
+  String get compareAllInPsf => '₹/sq ft all-in (carpet)';
+
+  @override
+  String get compareLoading => 'Loading';
+
+  @override
+  String get compareStamp => 'Stamp duty';
+
+  @override
+  String get compareGst => 'GST';
+
+  @override
+  String get compareExtras => 'Builder extras';
+
+  @override
+  String get compareBuildingAge => 'Building age';
+
+  @override
+  String get compareStatus => 'Stage';
+
+  @override
+  String get compareFlags => 'Flags';
+
+  @override
+  String compareFlagSummary(int critical, int warning, int info) {
+    return '$critical critical · $warning warning · $info info';
+  }
+
+  @override
+  String get compareChecklist => 'Checklist done';
+
+  @override
+  String get compareBest => 'Best value';
+
+  @override
+  String get compareCostSplit => 'Where the money goes';
+
+  @override
+  String compareYears(int years) {
+    return '$years yrs';
+  }
 }
