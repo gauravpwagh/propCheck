@@ -19,17 +19,21 @@ class LabelValue extends StatelessWidget {
   final String? semanticValue;
 
   @override
-  Widget build(BuildContext context) => Wrap(
-    alignment: WrapAlignment.spaceBetween,
-    crossAxisAlignment: WrapCrossAlignment.center,
-    spacing: 12,
-    children: [
-      Text(label, style: style),
-      Semantics(
-        label: semanticValue ?? value,
-        excludeSemantics: true,
-        child: Text(value, style: style),
-      ),
-    ],
+  Widget build(BuildContext context) => SizedBox(
+    // Full width so spaceBetween pushes the value to the right edge.
+    width: double.infinity,
+    child: Wrap(
+      alignment: WrapAlignment.spaceBetween,
+      crossAxisAlignment: WrapCrossAlignment.center,
+      spacing: 12,
+      children: [
+        Text(label, style: style),
+        Semantics(
+          label: semanticValue ?? value,
+          excludeSemantics: true,
+          child: Text(value, style: style),
+        ),
+      ],
+    ),
   );
 }
