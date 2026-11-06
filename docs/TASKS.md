@@ -23,12 +23,12 @@ Work top to bottom. Each milestone ends with `flutter analyze` clean and `flutte
 - [x] `Money` formatter tests: 1234567 → "₹12,34,567", "12.35 L", 10200000 → "1.02 Cr".
 
 ## M2 – Wizard and result
-- [ ] Wizard controller holding a draft `PropertyInput`, pre-filled from the active profile.
-- [ ] 14 screens per SPEC §2 with conditional skipping and accurate progress.
-- [ ] Live total bar using the engine.
-- [ ] Result screen: breakdown grouped (Price & taxes / Builder & society / Loan costs / Moving in), own funds needed, loan card (amount, EMI, tenure, binding limit explained), per-sq-ft card, flags list, disclaimer.
-- [ ] Budget mode result shows max price plus slab-boundary note.
-- [ ] Widget tests for skip logic and for result rendering of one golden case.
+- [x] Wizard controller holding a draft `PropertyInput`, pre-filled from the active profile.
+- [x] 14 screens per SPEC §2 with conditional skipping and accurate progress.
+- [x] Live total bar using the engine.
+- [x] Result screen: breakdown grouped (Price & taxes / Builder & society / Loan costs / Moving in), own funds needed, loan card (amount, EMI, tenure, binding limit explained), per-sq-ft card, flags list, disclaimer.
+- [x] Budget mode result shows max price plus slab-boundary note.
+- [x] Widget tests for skip logic and for result rendering of one golden case.
 
 ## M3 – Storage, save, edit, compare
 - [ ] Drift tables: `properties` (id, name, mode, profile_id, rate_version, locality, type, status, quoted_price, budget, carpet_sqft, builtup_sqft, ready_reckoner_value, area_reference_psf, ownership, created_at, updated_at, is_archived), `property_extras`, `resale_details` (building_year, has_oc, seller_loan, brokerage_pct, transfer_fee), `uc_details` (rera_number, months_to_possession, monthly_rent), `buyer_finance`, `checklist_items` (property_id, item_id, source[step|safety], done, note, done_at), `rate_profiles` (id, version, as_of, json, is_bundled), `risk_data` (version, as_of, json), `result_cache`.

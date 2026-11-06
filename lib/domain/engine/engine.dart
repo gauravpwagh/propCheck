@@ -10,4 +10,5 @@ export 'cost_lines.dart';
 export 'estimator.dart';
 export 'flags.dart';
 export 'loan.dart';
+export 'outcome.dart';
 export 'rounding.dart' show rnd;
