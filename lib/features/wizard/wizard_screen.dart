@@ -1,21 +1,38 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../app/providers.dart';
 import '../../core/money.dart';
 import '../../domain/engine/engine.dart';
+import '../../domain/models/saved_property.dart';
 import '../../l10n/gen/app_localizations.dart';
 import '../result/result_view.dart';
 import 'wizard_controller.dart';
 import 'wizard_state.dart';
 import 'wizard_steps.dart';
 
+/// Arguments for editing a saved property in the wizard.
+class WizardLaunch {
+  const WizardLaunch({
+    required this.saved,
+    required this.profile,
+    this.step = WizardStep.mode,
+  });
+
+  final SavedProperty saved;
+  final RateProfile profile;
+  final WizardStep step;
+}
+
 /// One question per screen with a live running total pinned at the bottom.
 class WizardScreen extends ConsumerWidget {
-  const WizardScreen({super.key, this.resultActions = const []});
+  const WizardScreen({super.key, this.launch});
 
-  /// Extra buttons on the result step (e.g. Save).
-  final List<Widget> resultActions;
+  /// Set when editing a saved property.
+  final WizardLaunch? launch;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -28,28 +45,73 @@ class WizardScreen extends ConsumerWidget {
           child: Text(AppLocalizations.of(context).commonError('$e')),
         ),
       ),
-      data: (_) => _WizardBody(resultActions: resultActions),
+      data: (_) => _WizardBody(launch: launch),
     );
   }
 }
 
-class _WizardBody extends ConsumerWidget {
-  const _WizardBody({required this.resultActions});
+class _WizardBody extends ConsumerStatefulWidget {
+  const _WizardBody({required this.launch});
 
-  final List<Widget> resultActions;
+  final WizardLaunch? launch;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<_WizardBody> createState() => _WizardBodyState();
+}
+
+class _WizardBodyState extends ConsumerState<_WizardBody> {
+  late bool _ready = widget.launch == null;
+  bool _saving = false;
+
+  @override
+  void initState() {
+    super.initState();
+    final launch = widget.launch;
+    if (launch != null) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted) return;
+        ref
+            .read(wizardControllerProvider.notifier)
+            .loadSaved(launch.saved, launch.profile, step: launch.step);
+        setState(() => _ready = true);
+      });
+    }
+  }
+
+  Future<void> _save() async {
+    final l = AppLocalizations.of(context);
+    final router = GoRouter.of(context);
+    setState(() => _saving = true);
+    final c = ref.read(wizardControllerProvider.notifier);
+    final draft = ref.read(wizardControllerProvider).draft;
+    final defaultName = [draft.input.type, ?draft.input.locality].join(', ');
+    final id = await c.save(defaultName: defaultName);
+    if (!mounted) return;
+    setState(() => _saving = false);
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text(l.resultSaved)));
+    if (widget.launch != null) {
+      router.pop(id);
+    } else {
+      unawaited(router.pushReplacement('/property/$id'));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (!_ready) {
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+    }
     final l = AppLocalizations.of(context);
     final state = ref.watch(wizardControllerProvider);
     final c = ref.read(wizardControllerProvider.notifier);
     final outcome = ref.watch(wizardOutcomeProvider);
-    final profile = ref.watch(activeProfileProvider).requireValue;
     final steps = state.steps;
     final current = state.index + 1;
 
     return PopScope(
-      canPop: state.isFirst,
+      canPop: state.isFirst || widget.launch != null,
       onPopInvokedWithResult: (didPop, _) {
         if (!didPop) c.back();
       },
@@ -84,7 +146,7 @@ class _WizardBody extends ConsumerWidget {
                     : ResultView(
                         outcome: outcome,
                         input: state.draft.input,
-                        profile: profile,
+                        profile: state.profile,
                         footer: [
                           Wrap(
                             spacing: 8,
@@ -95,7 +157,11 @@ class _WizardBody extends ConsumerWidget {
                                 icon: const Icon(Icons.edit),
                                 label: Text(l.resultEditInputs),
                               ),
-                              ...resultActions,
+                              FilledButton.icon(
+                                onPressed: _saving ? null : _save,
+                                icon: const Icon(Icons.save),
+                                label: Text(l.resultSave),
+                              ),
                             ],
                           ),
                           const SizedBox(height: 16),

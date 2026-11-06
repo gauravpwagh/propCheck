@@ -41,7 +41,7 @@ final class WizardControllerProvider
   }
 }
 
-String _$wizardControllerHash() => r'3a175757f643fa355905496fa8f40304ecd8c4c2';
+String _$wizardControllerHash() => r'1f89a25fa65d97ded313635028cf2c380163475f';
 
 abstract class _$WizardController extends $Notifier<WizardState> {
   WizardState build();
@@ -110,4 +110,4 @@ final class WizardOutcomeProvider
   }
 }
 
-String _$wizardOutcomeHash() => r'80a5a2e030b2714e54676d6e327b44d7b4121174';
+String _$wizardOutcomeHash() => r'ede16a09819879616775120e2ffcd32449536fb0';

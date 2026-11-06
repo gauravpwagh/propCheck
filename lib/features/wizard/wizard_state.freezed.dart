@@ -309,7 +309,8 @@ $PropertyInputCopyWith<$Res> get input {
 /// @nodoc
 mixin _$WizardState {
 
- WizardDraft get draft; WizardStep get step;
+ WizardDraft get draft;/// The profile version this draft is calculated with.
+ RateProfile get profile; WizardStep get step;
 /// Create a copy of WizardState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -320,16 +321,16 @@ $WizardStateCopyWith<WizardState> get copyWith => _$WizardStateCopyWithImpl<Wiza
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is WizardState&&(identical(other.draft, draft) || other.draft == draft)&&(identical(other.step, step) || other.step == step));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is WizardState&&(identical(other.draft, draft) || other.draft == draft)&&(identical(other.profile, profile) || other.profile == profile)&&(identical(other.step, step) || other.step == step));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,draft,step);
+int get hashCode => Object.hash(runtimeType,draft,profile,step);
 
 @override
 String toString() {
-  return 'WizardState(draft: $draft, step: $step)';
+  return 'WizardState(draft: $draft, profile: $profile, step: $step)';
 }
 
 
@@ -340,11 +341,11 @@ abstract mixin class $WizardStateCopyWith<$Res>  {
   factory $WizardStateCopyWith(WizardState value, $Res Function(WizardState) _then) = _$WizardStateCopyWithImpl;
 @useResult
 $Res call({
- WizardDraft draft, WizardStep step
+ WizardDraft draft, RateProfile profile, WizardStep step
 });
 
 
-$WizardDraftCopyWith<$Res> get draft;
+$WizardDraftCopyWith<$Res> get draft;$RateProfileCopyWith<$Res> get profile;
 
 }
 /// @nodoc
@@ -357,10 +358,11 @@ class _$WizardStateCopyWithImpl<$Res>
 
 /// Create a copy of WizardState
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? draft = null,Object? step = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? draft = null,Object? profile = null,Object? step = null,}) {
   return _then(_self.copyWith(
 draft: null == draft ? _self.draft : draft // ignore: cast_nullable_to_non_nullable
-as WizardDraft,step: null == step ? _self.step : step // ignore: cast_nullable_to_non_nullable
+as WizardDraft,profile: null == profile ? _self.profile : profile // ignore: cast_nullable_to_non_nullable
+as RateProfile,step: null == step ? _self.step : step // ignore: cast_nullable_to_non_nullable
 as WizardStep,
   ));
 }
@@ -372,6 +374,15 @@ $WizardDraftCopyWith<$Res> get draft {
   
   return $WizardDraftCopyWith<$Res>(_self.draft, (value) {
     return _then(_self.copyWith(draft: value));
+  });
+}/// Create a copy of WizardState
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$RateProfileCopyWith<$Res> get profile {
+  
+  return $RateProfileCopyWith<$Res>(_self.profile, (value) {
+    return _then(_self.copyWith(profile: value));
   });
 }
 }
@@ -455,10 +466,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( WizardDraft draft,  WizardStep step)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( WizardDraft draft,  RateProfile profile,  WizardStep step)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _WizardState() when $default != null:
-return $default(_that.draft,_that.step);case _:
+return $default(_that.draft,_that.profile,_that.step);case _:
   return orElse();
 
 }
@@ -476,10 +487,10 @@ return $default(_that.draft,_that.step);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( WizardDraft draft,  WizardStep step)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( WizardDraft draft,  RateProfile profile,  WizardStep step)  $default,) {final _that = this;
 switch (_that) {
 case _WizardState():
-return $default(_that.draft,_that.step);case _:
+return $default(_that.draft,_that.profile,_that.step);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -496,10 +507,10 @@ return $default(_that.draft,_that.step);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( WizardDraft draft,  WizardStep step)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( WizardDraft draft,  RateProfile profile,  WizardStep step)?  $default,) {final _that = this;
 switch (_that) {
 case _WizardState() when $default != null:
-return $default(_that.draft,_that.step);case _:
+return $default(_that.draft,_that.profile,_that.step);case _:
   return null;
 
 }
@@ -511,10 +522,12 @@ return $default(_that.draft,_that.step);case _:
 
 
 class _WizardState extends WizardState {
-  const _WizardState({required this.draft, this.step = WizardStep.mode}): super._();
+  const _WizardState({required this.draft, required this.profile, this.step = WizardStep.mode}): super._();
   
 
 @override final  WizardDraft draft;
+/// The profile version this draft is calculated with.
+@override final  RateProfile profile;
 @override@JsonKey() final  WizardStep step;
 
 /// Create a copy of WizardState
@@ -527,16 +540,16 @@ _$WizardStateCopyWith<_WizardState> get copyWith => __$WizardStateCopyWithImpl<_
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _WizardState&&(identical(other.draft, draft) || other.draft == draft)&&(identical(other.step, step) || other.step == step));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _WizardState&&(identical(other.draft, draft) || other.draft == draft)&&(identical(other.profile, profile) || other.profile == profile)&&(identical(other.step, step) || other.step == step));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,draft,step);
+int get hashCode => Object.hash(runtimeType,draft,profile,step);
 
 @override
 String toString() {
-  return 'WizardState(draft: $draft, step: $step)';
+  return 'WizardState(draft: $draft, profile: $profile, step: $step)';
 }
 
 
@@ -547,11 +560,11 @@ abstract mixin class _$WizardStateCopyWith<$Res> implements $WizardStateCopyWith
   factory _$WizardStateCopyWith(_WizardState value, $Res Function(_WizardState) _then) = __$WizardStateCopyWithImpl;
 @override @useResult
 $Res call({
- WizardDraft draft, WizardStep step
+ WizardDraft draft, RateProfile profile, WizardStep step
 });
 
 
-@override $WizardDraftCopyWith<$Res> get draft;
+@override $WizardDraftCopyWith<$Res> get draft;@override $RateProfileCopyWith<$Res> get profile;
 
 }
 /// @nodoc
@@ -564,10 +577,11 @@ class __$WizardStateCopyWithImpl<$Res>
 
 /// Create a copy of WizardState
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? draft = null,Object? step = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? draft = null,Object? profile = null,Object? step = null,}) {
   return _then(_WizardState(
 draft: null == draft ? _self.draft : draft // ignore: cast_nullable_to_non_nullable
-as WizardDraft,step: null == step ? _self.step : step // ignore: cast_nullable_to_non_nullable
+as WizardDraft,profile: null == profile ? _self.profile : profile // ignore: cast_nullable_to_non_nullable
+as RateProfile,step: null == step ? _self.step : step // ignore: cast_nullable_to_non_nullable
 as WizardStep,
   ));
 }
@@ -580,6 +594,15 @@ $WizardDraftCopyWith<$Res> get draft {
   
   return $WizardDraftCopyWith<$Res>(_self.draft, (value) {
     return _then(_self.copyWith(draft: value));
+  });
+}/// Create a copy of WizardState
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$RateProfileCopyWith<$Res> get profile {
+  
+  return $RateProfileCopyWith<$Res>(_self.profile, (value) {
+    return _then(_self.copyWith(profile: value));
   });
 }
 }

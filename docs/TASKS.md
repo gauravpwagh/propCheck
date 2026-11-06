@@ -31,13 +31,13 @@ Work top to bottom. Each milestone ends with `flutter analyze` clean and `flutte
 - [x] Widget tests for skip logic and for result rendering of one golden case.
 
 ## M3 – Storage, save, edit, compare
-- [ ] Drift tables: `properties` (id, name, mode, profile_id, rate_version, locality, type, status, quoted_price, budget, carpet_sqft, builtup_sqft, ready_reckoner_value, area_reference_psf, ownership, created_at, updated_at, is_archived), `property_extras`, `resale_details` (building_year, has_oc, seller_loan, brokerage_pct, transfer_fee), `uc_details` (rera_number, months_to_possession, monthly_rent), `buyer_finance`, `checklist_items` (property_id, item_id, source[step|safety], done, note, done_at), `rate_profiles` (id, version, as_of, json, is_bundled), `risk_data` (version, as_of, json), `result_cache`.
-- [ ] First-run seeding of bundled profile, steps and risk data.
-- [ ] Repositories + Riverpod providers.
-- [ ] Home list with search, sort (updated, total, ₹/sq ft), archive.
-- [ ] Property detail: edit per section (reopens that wizard screen), Duplicate, Delete with confirm.
-- [ ] Compare 2–3 properties: aligned rows (quoted, total, own funds, loan, EMI, ₹/sq ft quoted & all-in, loading, stamp, GST, extras, building age, status, flags by severity, checklist %), best-value highlight, `fl_chart` stacked cost split.
-- [ ] Repository tests with an in-memory Drift DB.
+- [x] Drift tables: `properties` (id, name, mode, profile_id, rate_version, locality, type, status, quoted_price, budget, carpet_sqft, builtup_sqft, ready_reckoner_value, area_reference_psf, ownership, created_at, updated_at, is_archived), `property_extras`, `resale_details` (building_year, has_oc, seller_loan, brokerage_pct, transfer_fee), `uc_details` (rera_number, months_to_possession, monthly_rent), `buyer_finance`, `checklist_items` (property_id, item_id, source[step|safety], done, note, done_at), `rate_profiles` (id, version, as_of, json, is_bundled), `risk_data` (version, as_of, json), `result_cache`.
+- [x] First-run seeding of bundled profile, steps and risk data.
+- [x] Repositories + Riverpod providers.
+- [x] Home list with search, sort (updated, total, ₹/sq ft), archive.
+- [x] Property detail: edit per section (reopens that wizard screen), Duplicate, Delete with confirm.
+- [x] Compare 2–3 properties: aligned rows (quoted, total, own funds, loan, EMI, ₹/sq ft quoted & all-in, loading, stamp, GST, extras, building age, status, flags by severity, checklist %), best-value highlight, `fl_chart` stacked cost split.
+- [x] Repository tests with an in-memory Drift DB.
 
 ## M4 – Guidance and risks
 - [ ] Steps loader + filter by status/condition; checklist persisted per property.

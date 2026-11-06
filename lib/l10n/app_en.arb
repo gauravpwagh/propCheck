@@ -1,8 +1,9 @@
 {
   "@@locale": "en",
   "appTitle": "PropCheck",
-  "@appTitle": { "description": "App name shown in the title bar and launcher" },
-
+  "@appTitle": {
+    "description": "App name shown in the title bar and launcher"
+  },
   "commonNext": "Next",
   "commonBack": "Back",
   "commonSkip": "Skip",
@@ -19,7 +20,13 @@
   "commonOptional": "Optional",
   "commonLearnMore": "What is this?",
   "commonError": "Something went wrong: {error}",
-  "@commonError": { "placeholders": { "error": { "type": "String" } } },
+  "@commonError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
   "commonLoading": "Loading…",
   "commonSqft": "sq ft",
   "commonSqm": "sq m",
@@ -29,10 +36,15 @@
   "commonAmountLabel": "Amount (₹)",
   "commonAmountHint": "e.g. 85,00,000 or 85 L",
   "commonAmountInWords": "= {amount}",
-  "@commonAmountInWords": { "placeholders": { "amount": { "type": "String" } } },
+  "@commonAmountInWords": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
   "commonInvalidNumber": "Enter a number",
   "commonMustBePositive": "Must be more than zero",
-
   "homeTitle": "My properties",
   "homeNewEstimate": "New estimate",
   "homeEmptyTitle": "No properties yet",
@@ -48,26 +60,38 @@
   "homeUnarchive": "Unarchive",
   "homeArchived": "Archived",
   "homeTotalLabel": "Total {total}",
-  "@homeTotalLabel": { "placeholders": { "total": { "type": "String" } } },
+  "@homeTotalLabel": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
   "homeRisks": "Scam patterns & risks",
   "homeSettings": "Settings",
   "homeRecalcNeeded": "Rates changed",
-
   "wizardTitle": "New estimate",
   "wizardEditTitle": "Edit estimate",
   "wizardStepOf": "Step {current} of {total}",
-  "@wizardStepOf": { "placeholders": { "current": { "type": "int" }, "total": { "type": "int" } } },
+  "@wizardStepOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
   "wizardSeeResult": "See result",
   "wizardRunningTotal": "Running total",
   "wizardRunningMaxPrice": "Max quoted price",
-
   "stepModeTitle": "What do you want to work out?",
   "stepModeWhy": "We can start from a price you were quoted, or from the total you can spend.",
   "modePriceToTotal": "I have a quoted price",
   "modePriceToTotalHelp": "Find the total amount you will actually pay.",
   "modeBudgetToPrice": "I have a total budget",
   "modeBudgetToPriceHelp": "Find the highest quoted price you can afford.",
-
   "stepLocationTitle": "Where is the property?",
   "stepLocationWhy": "Stamp duty and other rates depend on the city.",
   "locationProfile": "Rates for",
@@ -75,10 +99,8 @@
   "locationLocalityHint": "e.g. Andheri East",
   "locationName": "Name for this property",
   "locationNameHint": "e.g. Sunrise Heights 1BHK",
-
   "stepTypeTitle": "What type of flat?",
   "stepTypeWhy": "Type sets the default carpet area and interiors budget.",
-
   "stepStatusTitle": "What stage is it at?",
   "stepStatusWhy": "GST, builder charges and loan timing depend on this.",
   "statusUnderConstruction": "Under construction",
@@ -87,30 +109,32 @@
   "statusReadyPossessionHelp": "New flat from the builder with OC issued. No GST.",
   "statusResale": "Resale",
   "statusResaleHelp": "Bought from the current owner.",
-
   "stepAmountTitlePrice": "What is the quoted price?",
   "stepAmountTitleBudget": "What is your total budget?",
   "stepAmountWhyPrice": "The base price the seller or builder quoted, before taxes and extras.",
   "stepAmountWhyBudget": "Everything you can spend, including stamp duty, fees and interiors, plus the loan.",
-
   "stepAreaTitle": "How big is it?",
   "stepAreaWhy": "Used for per-sq-ft rates, maintenance, renovation and the GST slab.",
   "areaCarpet": "Carpet area",
   "areaBuiltup": "Built-up area",
   "areaBuiltupHelp": "Leave as is to assume carpet × {ratio}.",
-  "@areaBuiltupHelp": { "placeholders": { "ratio": { "type": "String" } } },
+  "@areaBuiltupHelp": {
+    "placeholders": {
+      "ratio": {
+        "type": "String"
+      }
+    }
+  },
   "areaUnit": "Unit",
   "areaReadyReckoner": "Ready reckoner value (₹)",
   "areaReadyReckonerHelp": "Government valuation. Stamp duty is charged on the higher of this and the agreement value.",
   "areaReference": "Typical rate in this area (₹ per sq ft carpet)",
   "areaReferenceHelp": "If the quoted rate is far below this, we warn you.",
-
   "stepBuyerTitle": "Who is buying?",
   "stepBuyerWhy": "Women buyers pay lower stamp duty in Maharashtra.",
   "ownershipMale": "Man",
   "ownershipFemale": "Woman",
   "ownershipJoint": "Jointly (man and woman)",
-
   "stepExtrasTitle": "Builder extras",
   "stepExtrasWhy": "Parking, floor rise and similar charges. Ones written into the agreement also attract stamp duty and GST.",
   "extrasAdd": "Add extra",
@@ -124,13 +148,11 @@
   "extraKindPlc": "Preferred location",
   "extraKindClubhouse": "Clubhouse",
   "extraKindDevelopment": "Development charges",
-
   "stepMaintenanceTitle": "Maintenance and society",
   "stepMaintenanceWhy": "Builders usually collect maintenance in advance at possession.",
   "maintenanceMonths": "Months collected in advance",
   "maintenanceRate": "Maintenance rate (₹ per sq ft per month)",
   "maintenanceTransferFee": "Society transfer fee (₹)",
-
   "stepResaleTitle": "About the building",
   "stepResaleWhy": "Older buildings get shorter loans and need more renovation.",
   "resaleBuildingYear": "Year the building was completed",
@@ -139,15 +161,19 @@
   "resaleSellerLoanHelp": "Doesn't change your cost, but part of your payment goes to the seller's bank.",
   "resaleBrokerage": "Brokerage (% of price)",
   "invalidYear": "Enter a year between 1900 and {max}",
-  "@invalidYear": { "placeholders": { "max": { "type": "int" } } },
-
+  "@invalidYear": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
   "stepUcTitle": "About the project",
   "stepUcWhy": "Delays cost you pre-EMI interest and rent while you wait.",
   "ucRera": "MahaRERA registration number",
   "ucReraHint": "e.g. P51800012345",
   "ucMonths": "Months until possession",
   "ucRent": "Rent you pay meanwhile (₹ per month)",
-
   "stepFinanceTitle": "Home loan",
   "stepFinanceWhy": "We estimate how much a bank will probably lend and what it adds to your costs.",
   "financeUsingLoan": "I will take a home loan",
@@ -161,21 +187,34 @@
   "financeOwnFundsHelp": "Optional. We'll warn you if the cash you need is more than this.",
   "financeRate": "Interest rate (% per year)",
   "financeTenure": "Tenure you want (years)",
-
   "stepOneTimeTitle": "One-time costs",
   "stepOneTimeWhy": "Easy to forget, but they come out of your pocket.",
   "oneTimeLegal": "Lawyer fees (₹)",
   "oneTimeInteriors": "Interiors and furnishing (₹)",
-
   "resultTitle": "Result",
   "resultTotal": "Total you will pay",
   "resultExtraOverQuoted": "{amount} ({pct}%) more than the quoted price",
-  "@resultExtraOverQuoted": { "placeholders": { "amount": { "type": "String" }, "pct": { "type": "String" } } },
+  "@resultExtraOverQuoted": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
   "resultOwnFunds": "Cash you need",
   "resultOwnFundsHelp": "Total minus the probable loan.",
   "resultMaxPrice": "Highest quoted price you can afford",
   "resultMaxPriceHelp": "Rounded down to ₹10,000. Total at this price: {total}.",
-  "@resultMaxPriceHelp": { "placeholders": { "total": { "type": "String" } } },
+  "@resultMaxPriceHelp": {
+    "placeholders": {
+      "total": {
+        "type": "String"
+      }
+    }
+  },
   "resultGstSlabNote": "This is close to the ₹45 lakh affordable-housing GST limit. A small price change can move GST between 1% and 5%.",
   "resultBreakdown": "Breakdown",
   "groupPriceAndTaxes": "Price & taxes",
@@ -185,9 +224,21 @@
   "resultLoanCard": "Probable loan",
   "resultLoanNone": "No loan",
   "resultLoanEmi": "EMI {emi} per month",
-  "@resultLoanEmi": { "placeholders": { "emi": { "type": "String" } } },
+  "@resultLoanEmi": {
+    "placeholders": {
+      "emi": {
+        "type": "String"
+      }
+    }
+  },
   "resultLoanTenure": "Tenure {years} years",
-  "@resultLoanTenure": { "placeholders": { "years": { "type": "int" } } },
+  "@resultLoanTenure": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  },
   "resultLoanByIncome": "By income",
   "resultLoanByLtv": "By loan-to-value",
   "bindingLtv": "Limited by loan-to-value: banks lend only part of the agreement value.",
@@ -203,17 +254,41 @@
   "resultAllInBuiltup": "All-in, built-up",
   "resultLoading": "Loading (built-up over carpet)",
   "resultPerSqftValue": "{amount}/sq ft",
-  "@resultPerSqftValue": { "placeholders": { "amount": { "type": "String" } } },
+  "@resultPerSqftValue": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
   "resultFlags": "Things to check",
   "resultNoFlags": "No red flags from what you entered.",
   "resultPayments": "Payment notes",
   "resultTds": "Deduct TDS of {amount} (1%) from the payment to the seller and deposit it with the tax department. This is not an extra cost.",
-  "@resultTds": { "placeholders": { "amount": { "type": "String" } } },
+  "@resultTds": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
   "resultSellerPayoff": "{amount} of your payment goes to the seller's bank to close their loan. Your total does not change.",
-  "@resultSellerPayoff": { "placeholders": { "amount": { "type": "String" } } },
+  "@resultSellerPayoff": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
   "resultUncertainties": "Keep in mind",
   "uncertaintyRates": "Rates are as of {date}. Check current stamp duty and GST before you pay.",
-  "@uncertaintyRates": { "placeholders": { "date": { "type": "String" } } },
+  "@uncertaintyRates": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
   "uncertaintyValuation": "The bank may value the flat lower than the price, which reduces the loan.",
   "uncertaintyCharges": "Builder and society charges vary; get them in writing.",
   "uncertaintyUcDelay": "Under-construction projects are often delayed, which adds pre-EMI interest and rent.",
@@ -221,7 +296,6 @@
   "resultSave": "Save property",
   "resultSaved": "Saved",
   "resultEditInputs": "Edit inputs",
-
   "lineAgreementValue": "Agreement value",
   "lineStampDuty": "Stamp duty",
   "lineRegistration": "Registration fee",
@@ -238,7 +312,6 @@
   "linePreEmiInterest": "Pre-EMI interest until possession",
   "lineRentOverlap": "Rent until possession",
   "lineInteriors": "Interiors",
-
   "infoAgreementValue": "The price written in your sale agreement: the quoted price plus any extras (such as parking) included in the agreement.",
   "infoStampDuty": "A state tax on the sale agreement, charged on the higher of the agreement value and the government ready reckoner value. In Mumbai it includes metro cess; women buyers get a 1% concession.",
   "infoRegistration": "Fee to register the agreement with the sub-registrar: 1% of the agreement value, capped at ₹30,000.",
@@ -255,7 +328,6 @@
   "infoPreEmiInterest": "While the flat is being built, the bank releases the loan in stages and you pay interest on what has been released. We assume half the loan is out on average.",
   "infoRentOverlap": "Rent you keep paying until you can move in.",
   "infoInteriors": "Furniture, kitchen, painting and fittings. Change this to your own budget.",
-
   "flagNoReraTitle": "No MahaRERA number",
   "flagNoReraAction": "Every under-construction project must be registered with MahaRERA. Ask for the number and check it on the MahaRERA website before you pay anything.",
   "flagNoOcTitle": "No occupancy certificate",
@@ -280,8 +352,142 @@
   "flagBelowMarketPriceAction": "A very low price can signal a scam, a legal problem or a building issue. Verify the seller and title carefully.",
   "flagRiskAreaTitle": "Known risk in this area",
   "flagRiskAreaAction": "{note}",
-  "@flagRiskAreaAction": { "placeholders": { "note": { "type": "String" } } },
+  "@flagRiskAreaAction": {
+    "placeholders": {
+      "note": {
+        "type": "String"
+      }
+    }
+  },
   "severityCritical": "Critical",
   "severityWarning": "Warning",
-  "severityInfo": "Info"
+  "severityInfo": "Info",
+  "homeItemSubtitle": "{type} · {status}",
+  "@homeItemSubtitle": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "homeItemPsf": "{amount}/sq ft all-in",
+  "@homeItemPsf": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "homeFlagCount": "{count, plural, =1{1 critical flag} other{{count} critical flags}}",
+  "@homeFlagCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeSelected": "{count} selected",
+  "@homeSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeNoMatches": "No properties match your search.",
+  "homeSort": "Sort",
+  "homeMaxPriceLabel": "Max price {price}",
+  "@homeMaxPriceLabel": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "detailRatesVersion": "Calculated with rates v{version} (as of {date})",
+  "@detailRatesVersion": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "detailOutdated": "Rates have changed since this was saved (now v{version}).",
+  "@detailOutdated": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "detailRecalculate": "Recalculate with current rates",
+  "detailRecalculated": "Recalculated with current rates",
+  "detailDuplicate": "Duplicate",
+  "detailDuplicateSuffix": " (copy)",
+  "detailDuplicated": "Copy created",
+  "detailDeleteTitle": "Delete this property?",
+  "detailDeleteBody": "Its inputs and checklist progress will be removed from this device. This can't be undone.",
+  "detailNotFound": "This property no longer exists.",
+  "detailInputs": "Your inputs",
+  "detailInputsHelp": "Tap a section to change it.",
+  "sectionMode": "What you're working out",
+  "sectionLocation": "Location and name",
+  "sectionType": "Flat type",
+  "sectionStatus": "Stage",
+  "sectionAmount": "Price or budget",
+  "sectionArea": "Area",
+  "sectionBuyer": "Buyer",
+  "sectionExtras": "Builder extras",
+  "sectionMaintenance": "Maintenance and society",
+  "sectionResale": "Building details",
+  "sectionUc": "Project details",
+  "sectionFinance": "Home loan",
+  "sectionOneTime": "One-time costs",
+  "compareTitle": "Compare",
+  "compareNeedTwo": "Pick at least two properties to compare.",
+  "compareQuoted": "Quoted price",
+  "compareTotal": "Total",
+  "compareOwnFunds": "Cash you need",
+  "compareLoan": "Probable loan",
+  "compareEmi": "EMI",
+  "compareQuotedPsf": "₹/sq ft quoted (carpet)",
+  "compareAllInPsf": "₹/sq ft all-in (carpet)",
+  "compareLoading": "Loading",
+  "compareStamp": "Stamp duty",
+  "compareGst": "GST",
+  "compareExtras": "Builder extras",
+  "compareBuildingAge": "Building age",
+  "compareStatus": "Stage",
+  "compareFlags": "Flags",
+  "compareFlagSummary": "{critical} critical · {warning} warning · {info} info",
+  "@compareFlagSummary": {
+    "placeholders": {
+      "critical": {
+        "type": "int"
+      },
+      "warning": {
+        "type": "int"
+      },
+      "info": {
+        "type": "int"
+      }
+    }
+  },
+  "compareChecklist": "Checklist done",
+  "compareBest": "Best value",
+  "compareCostSplit": "Where the money goes",
+  "compareYears": "{years} yrs",
+  "@compareYears": {
+    "placeholders": {
+      "years": {
+        "type": "int"
+      }
+    }
+  }
 }
