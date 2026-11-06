@@ -12,15 +12,15 @@ Work top to bottom. Each milestone ends with `flutter analyze` clean and `flutte
 - [x] Create the folder skeleton from SPEC §8 / plan: `app/`, `core/`, `domain/`, `data/`, `features/`.
 
 ## M1 – Domain engine (no UI)
-- [ ] Freezed models: `RateProfile` (parses `rate_profiles.json`), `PropertyInput`, `Extra`, `Finance`, `CostBreakdown`, `LoanResult`, `Flag`.
-- [ ] Add the category extension points from SPEC §10: `PropertyCategory` enum (only `residentialFlat` enabled), `PropertyInput.category`, and a `CostLineRegistry` so line items are selected per category and status rather than by hard-coded `if` chains.
-- [ ] `estimate()` ported from `tools/reference_engine.py` with the same line-item keys.
-- [ ] `loanEligibility()` with binding-limit reporting.
-- [ ] `solveBudget()` using the identical binary search.
-- [ ] `evaluateFlags()` for all rules except `risk_area`.
-- [ ] Golden test: load `test_fixtures/golden_cases.json`, run every case, assert every line item, total, loan fields, flags and (budget cases) `expected_max_price`.
-- [ ] Unit tests for edge cases: carpet exactly 60 m², AV exactly 45L / 50L / 75L, building age 30 and 40, residual life ≤ 0 (loan 0), no loan, zero income.
-- [ ] `Money` formatter tests: 1234567 → "₹12,34,567", "12.35 L", 10200000 → "1.02 Cr".
+- [x] Freezed models: `RateProfile` (parses `rate_profiles.json`), `PropertyInput`, `Extra`, `Finance`, `CostBreakdown`, `LoanResult`, `Flag`.
+- [x] Add the category extension points from SPEC §10: `PropertyCategory` enum (only `residentialFlat` enabled), `PropertyInput.category`, and a `CostLineRegistry` so line items are selected per category and status rather than by hard-coded `if` chains.
+- [x] `estimate()` ported from `tools/reference_engine.py` with the same line-item keys.
+- [x] `loanEligibility()` with binding-limit reporting.
+- [x] `solveBudget()` using the identical binary search.
+- [x] `evaluateFlags()` for all rules except `risk_area`.
+- [x] Golden test: load `test_fixtures/golden_cases.json`, run every case, assert every line item, total, loan fields, flags and (budget cases) `expected_max_price`.
+- [x] Unit tests for edge cases: carpet exactly 60 m², AV exactly 45L / 50L / 75L, building age 30 and 40, residual life ≤ 0 (loan 0), no loan, zero income.
+- [x] `Money` formatter tests: 1234567 → "₹12,34,567", "12.35 L", 10200000 → "1.02 Cr".
 
 ## M2 – Wizard and result
 - [ ] Wizard controller holding a draft `PropertyInput`, pre-filled from the active profile.

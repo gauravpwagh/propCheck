@@ -50,6 +50,11 @@
           { "max_value_inr": null, "ltv_pct": 75 }
         ]
       },
+      "wizard_defaults": {
+        "months_to_possession": 36,
+        "buyer_age": 32,
+        "tenure_years": 20
+      },
       "flag_thresholds": {
         "old_building_age": 30,
         "very_old_building_age": 40,

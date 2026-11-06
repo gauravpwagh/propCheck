@@ -124,7 +124,7 @@ def estimate(inp, p):
     lines["legal"] = inp.get("legal_fees", p["legal_fees_inr"])
 
     if status == "under_construction":
-        mtp = inp.get("months_to_possession", 36)
+        mtp = inp.get("months_to_possession", p["wizard_defaults"]["months_to_possession"])
         rate = (inp.get("finance") or {}).get("rate_pct", p["loan"]["interest_pct"])
         lines["pre_emi_interest"] = rnd(L * rate / 100 * p["pre_emi_avg_disbursed_fraction"] * mtp / 12)
         lines["rent_overlap"] = rnd(inp.get("monthly_rent", 0) * mtp)
