@@ -539,6 +539,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get resultLoanByLtv => 'By loan-to-value';
 
   @override
+  String get resultLoanNeedsIncome =>
+      'Enter your net monthly income in the Home loan step to estimate how much a bank may lend.';
+
+  @override
   String get bindingLtv =>
       'Limited by loan-to-value: banks lend only part of the agreement value.';
 
