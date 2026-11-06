@@ -9,6 +9,8 @@ import '../../core/money.dart';
 import '../../domain/engine/engine.dart';
 import '../../domain/models/saved_property.dart';
 import '../../l10n/gen/app_localizations.dart';
+import '../guidance/guidance_providers.dart';
+import '../guidance/guidance_section.dart';
 import '../result/result_view.dart';
 import 'wizard_controller.dart';
 import 'wizard_state.dart';
@@ -107,6 +109,9 @@ class _WizardBodyState extends ConsumerState<_WizardBody> {
     final state = ref.watch(wizardControllerProvider);
     final c = ref.read(wizardControllerProvider.notifier);
     final outcome = ref.watch(wizardOutcomeProvider);
+    final guidance = state.isResult
+        ? ref.watch(guidanceForProvider(state.draft.input)).value
+        : null;
     final steps = state.steps;
     final current = state.index + 1;
 
@@ -147,7 +152,16 @@ class _WizardBodyState extends ConsumerState<_WizardBody> {
                         outcome: outcome,
                         input: state.draft.input,
                         profile: state.profile,
+                        extraFlags: [?guidance?.riskFlag],
+                        flagNotes: {
+                          if (guidance != null)
+                            'risk_area': guidance.areaNoteText,
+                        },
                         footer: [
+                          if (guidance != null) ...[
+                            GuidanceSection(guidance: guidance),
+                            const SizedBox(height: 16),
+                          ],
                           Wrap(
                             spacing: 8,
                             runSpacing: 8,

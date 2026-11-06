@@ -3,6 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../l10n/gen/app_localizations.dart';
+import '../../app/providers.dart';
+import '../../data/repositories/checklist_repository.dart';
+import '../guidance/guidance_providers.dart';
+import '../guidance/guidance_section.dart';
 import '../result/result_view.dart';
 import '../wizard/wizard_screen.dart';
 import '../wizard/wizard_state.dart';
@@ -59,6 +63,42 @@ class _Detail extends ConsumerWidget {
     }
   }
 
+  Future<void> _editNote(
+    BuildContext context,
+    WidgetRef ref,
+    ChecklistEntry e,
+  ) async {
+    final l = AppLocalizations.of(context);
+    final controller = TextEditingController(text: e.note ?? '');
+    final note = await showDialog<String>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(l.guidanceEditNote),
+        content: TextField(
+          controller: controller,
+          autofocus: true,
+          maxLines: 3,
+          decoration: InputDecoration(labelText: l.guidanceNote),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(l.commonCancel),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(context, controller.text),
+            child: Text(l.commonSave),
+          ),
+        ],
+      ),
+    );
+    controller.dispose();
+    if (note == null) return;
+    await ref
+        .read(checklistRepositoryProvider)
+        .setNote(e.id, note.trim().isEmpty ? null : note.trim());
+  }
+
   Future<void> _menu(BuildContext context, WidgetRef ref, _MenuAction a) async {
     final l = AppLocalizations.of(context);
     final c = ref.read(propertyDetailControllerProvider(view.id).notifier);
@@ -102,6 +142,8 @@ class _Detail extends ConsumerWidget {
     final p = view.property;
     final outcome = view.outcome;
     final title = p.name.isEmpty ? p.input.type : p.name;
+    final guidance = ref.watch(guidanceForProvider(p.input)).value;
+    final checklist = ref.watch(syncedChecklistProvider(view.id)).value;
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -138,11 +180,26 @@ class _Detail extends ConsumerWidget {
               outcome: outcome,
               input: p.input,
               profile: view.profile,
+              extraFlags: [?guidance?.riskFlag],
+              flagNotes: {
+                if (guidance != null) 'risk_area': guidance.areaNoteText,
+              },
               header: [
                 _RatesBanner(view: view),
                 const SizedBox(height: 12),
               ],
               footer: [
+                if (guidance != null) ...[
+                  GuidanceSection(
+                    guidance: guidance,
+                    entries: checklist ?? const [],
+                    onToggle: (e, done) => ref
+                        .read(checklistRepositoryProvider)
+                        .setDone(e.id, done: done),
+                    onEditNote: (e) => _editNote(context, ref, e),
+                  ),
+                  const SizedBox(height: 16),
+                ],
                 _Sections(view: view, onEdit: (s) => _edit(context, ref, s)),
                 const SizedBox(height: 16),
               ],

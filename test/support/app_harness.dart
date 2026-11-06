@@ -1,3 +1,4 @@
+import 'package:drift/drift.dart' show driftRuntimeOptions;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -15,7 +16,10 @@ import 'fixtures.dart';
 
 /// Full app over an in-memory database, for end-to-end widget tests.
 class AppHarness {
-  AppHarness() : db = AppDatabase.memory();
+  AppHarness() : db = AppDatabase.memory() {
+    // Each test makes its own in-memory database on purpose.
+    driftRuntimeOptions.dontWarnAboutMultipleDatabases = true;
+  }
 
   final AppDatabase db;
   late ProviderContainer container;

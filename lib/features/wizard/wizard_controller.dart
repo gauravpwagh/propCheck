@@ -3,6 +3,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../../app/providers.dart';
 import '../../domain/engine/engine.dart';
 import '../../domain/models/saved_property.dart';
+import '../guidance/guidance_providers.dart';
 import 'wizard_state.dart';
 
 part 'wizard_controller.g.dart';
@@ -127,6 +128,10 @@ class WizardController extends _$WizardController {
     if (outcome != null) {
       await repo.writeCache(id, _profile.version, outcome);
     }
+    final guidance = await ref.read(guidanceForProvider(d.input).future);
+    await ref
+        .read(checklistRepositoryProvider)
+        .sync(id, checklistKeysFor(guidance));
     if (ref.mounted) {
       updateDraft((d) => d.copyWith(propertyId: id));
     }

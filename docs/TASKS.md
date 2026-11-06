@@ -40,11 +40,11 @@ Work top to bottom. Each milestone ends with `flutter analyze` clean and `flutte
 - [x] Repository tests with an in-memory Drift DB.
 
 ## M4 – Guidance and risks
-- [ ] Steps loader + filter by status/condition; checklist persisted per property.
-- [ ] Risk loader; patterns filtered/sorted per SPEC §5; `risk_area` flag via `area_notes`.
-- [ ] Safety checks from `prevention_checks` appended to the checklist.
-- [ ] Risks library screen: pattern cards, red flags, recent cases with source links (`url_launcher`), official verification links.
-- [ ] Staleness banner when risk `as_of` > 6 months.
+- [x] Steps loader + filter by status/condition; checklist persisted per property.
+- [x] Risk loader; patterns filtered/sorted per SPEC §5; `risk_area` flag via `area_notes`.
+- [x] Safety checks from `prevention_checks` appended to the checklist.
+- [x] Risks library screen: pattern cards, red flags, recent cases with source links (`url_launcher`), official verification links.
+- [x] Staleness banner when risk `as_of` > 6 months.
 
 ## M5 – Settings, import, backup
 - [ ] Rate profile editor with validation, reset to bundled, version bump on save, "Recalculate with current rates" on property detail.

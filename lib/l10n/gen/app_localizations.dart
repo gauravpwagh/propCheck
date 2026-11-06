@@ -1899,6 +1899,180 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{years} yrs'**
   String compareYears(int years);
+
+  /// No description provided for @guidanceSteps.
+  ///
+  /// In en, this message translates to:
+  /// **'Steps to buy'**
+  String get guidanceSteps;
+
+  /// No description provided for @guidanceStepsProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'{done} of {total} done'**
+  String guidanceStepsProgress(int done, int total);
+
+  /// No description provided for @guidanceSafetyChecks.
+  ///
+  /// In en, this message translates to:
+  /// **'Safety checks'**
+  String get guidanceSafetyChecks;
+
+  /// No description provided for @guidanceSafetyHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'From scam patterns reported in your region.'**
+  String get guidanceSafetyHelp;
+
+  /// No description provided for @guidanceOpenLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Open link'**
+  String get guidanceOpenLink;
+
+  /// No description provided for @guidanceRisks.
+  ///
+  /// In en, this message translates to:
+  /// **'Scams to watch for'**
+  String get guidanceRisks;
+
+  /// No description provided for @guidanceRisksHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'Patterns reported for this kind of purchase. Tap for details.'**
+  String get guidanceRisksHelp;
+
+  /// No description provided for @guidanceAreaMatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Reported in your area'**
+  String get guidanceAreaMatch;
+
+  /// No description provided for @guidanceSeeAll.
+  ///
+  /// In en, this message translates to:
+  /// **'See all scam patterns'**
+  String get guidanceSeeAll;
+
+  /// No description provided for @guidanceNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Note'**
+  String get guidanceNote;
+
+  /// No description provided for @guidanceEditNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit note'**
+  String get guidanceEditNote;
+
+  /// No description provided for @riskAsOf.
+  ///
+  /// In en, this message translates to:
+  /// **'Risk data as of {date}'**
+  String riskAsOf(String date);
+
+  /// No description provided for @riskStale.
+  ///
+  /// In en, this message translates to:
+  /// **'This data may be outdated. Check recent news and update it in Settings.'**
+  String get riskStale;
+
+  /// No description provided for @risksTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Scam patterns & risks'**
+  String get risksTitle;
+
+  /// No description provided for @risksHowItWorks.
+  ///
+  /// In en, this message translates to:
+  /// **'How it works'**
+  String get risksHowItWorks;
+
+  /// No description provided for @risksWatchFor.
+  ///
+  /// In en, this message translates to:
+  /// **'Watch for'**
+  String get risksWatchFor;
+
+  /// No description provided for @risksPrevention.
+  ///
+  /// In en, this message translates to:
+  /// **'How to protect yourself'**
+  String get risksPrevention;
+
+  /// No description provided for @risksRecentCases.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent cases'**
+  String get risksRecentCases;
+
+  /// No description provided for @risksCaseAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount: {amount}'**
+  String risksCaseAmount(String amount);
+
+  /// No description provided for @risksAreas.
+  ///
+  /// In en, this message translates to:
+  /// **'Areas: {areas}'**
+  String risksAreas(String areas);
+
+  /// No description provided for @risksAreaNotes.
+  ///
+  /// In en, this message translates to:
+  /// **'Area notes'**
+  String get risksAreaNotes;
+
+  /// No description provided for @risksPrecautions.
+  ///
+  /// In en, this message translates to:
+  /// **'General precautions'**
+  String get risksPrecautions;
+
+  /// No description provided for @risksVerify.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify officially'**
+  String get risksVerify;
+
+  /// No description provided for @risksSeverityCritical.
+  ///
+  /// In en, this message translates to:
+  /// **'Critical'**
+  String get risksSeverityCritical;
+
+  /// No description provided for @risksSeverityHigh.
+  ///
+  /// In en, this message translates to:
+  /// **'High'**
+  String get risksSeverityHigh;
+
+  /// No description provided for @risksSeverityMedium.
+  ///
+  /// In en, this message translates to:
+  /// **'Medium'**
+  String get risksSeverityMedium;
+
+  /// No description provided for @risksSeverityLow.
+  ///
+  /// In en, this message translates to:
+  /// **'Low'**
+  String get risksSeverityLow;
+
+  /// No description provided for @risksLinkError.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t open the link.'**
+  String get risksLinkError;
+
+  /// No description provided for @risksAllAreas.
+  ///
+  /// In en, this message translates to:
+  /// **'All areas'**
+  String get risksAllAreas;
 }
 
 class _AppLocalizationsDelegate
