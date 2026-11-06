@@ -1066,6 +1066,12 @@ abstract class AppLocalizations {
   /// **'By loan-to-value'**
   String get resultLoanByLtv;
 
+  /// No description provided for @resultLoanNeedsIncome.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your net monthly income in the Home loan step to estimate how much a bank may lend.'**
+  String get resultLoanNeedsIncome;
+
   /// No description provided for @bindingLtv.
   ///
   /// In en, this message translates to:

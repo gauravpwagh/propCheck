@@ -151,6 +151,40 @@ void main() {
     );
   });
 
+  testWidgets('loan card asks for income when none is entered', (tester) async {
+    final golden = readJson('test_fixtures/golden_cases.json');
+    final c0 = (golden['cases'] as List).first as Map<String, dynamic>;
+    final input = PropertyInput.fromJson(c0['input'] as Map<String, dynamic>);
+    final container = await pumpWithProfile(
+      tester,
+      const WizardScreen(),
+      profile,
+    );
+    final c = container.read(wizardControllerProvider.notifier);
+    final noIncome = input.copyWith(
+      finance: input.finance!.copyWith(netIncome: 0),
+    );
+    c.load(
+      WizardDraft(profileId: profile.id, input: noIncome),
+      step: WizardStep.result,
+    );
+    await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(find.text('Probable loan'), 300);
+    expect(
+      find.textContaining('Enter your net monthly income'),
+      findsOneWidget,
+    );
+
+    c.load(
+      WizardDraft(profileId: profile.id, input: input),
+      step: WizardStep.result,
+    );
+    await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(find.text('Probable loan'), 300);
+    expect(find.textContaining('Enter your net monthly income'), findsNothing);
+    expect(find.textContaining('Limited by loan-to-value'), findsOneWidget);
+  });
+
   testWidgets('wizard survives large text', (tester) async {
     tester.platformDispatcher.textScaleFactorTestValue = 2;
     addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);

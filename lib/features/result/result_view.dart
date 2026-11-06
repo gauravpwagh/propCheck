@@ -47,7 +47,7 @@ class ResultView extends StatelessWidget {
         const SizedBox(height: 16),
         _Breakdown(breakdown: b),
         const SizedBox(height: 16),
-        _LoanCard(loan: b.loan),
+        _LoanCard(loan: b.loan, finance: input.finance),
         const SizedBox(height: 16),
         _PerSqftCard(perSqft: b.perSqft),
         const SizedBox(height: 16),
@@ -212,9 +212,14 @@ class _LineRow extends StatelessWidget {
 }
 
 class _LoanCard extends StatelessWidget {
-  const _LoanCard({required this.loan});
+  const _LoanCard({required this.loan, this.finance});
 
   final LoanResult loan;
+  final Finance? finance;
+
+  /// Taking a loan but no income entered, so the income limit is zero.
+  bool get _missingIncome =>
+      (finance?.usingLoan ?? false) && (finance?.netIncome ?? 0) <= 0;
 
   @override
   Widget build(BuildContext context) {
@@ -238,7 +243,21 @@ class _LoanCard extends StatelessWidget {
                 Text(l.resultLoanTenure(loan.tenureYears)),
               ],
               const SizedBox(height: 8),
-              Text(l.bindingLabel(loan.binding)),
+              if (_missingIncome)
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(
+                      Icons.info_outline,
+                      size: 20,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(child: Text(l.resultLoanNeedsIncome)),
+                  ],
+                )
+              else
+                Text(l.bindingLabel(loan.binding)),
               const SizedBox(height: 8),
               _row(l.resultLoanByIncome, Money.full(loan.loanByIncome)),
               _row(l.resultLoanByLtv, Money.full(loan.loanByLtv)),

@@ -241,6 +241,7 @@
   },
   "resultLoanByIncome": "By income",
   "resultLoanByLtv": "By loan-to-value",
+  "resultLoanNeedsIncome": "Enter your net monthly income in the Home loan step to estimate how much a bank may lend.",
   "bindingLtv": "Limited by loan-to-value: banks lend only part of the agreement value.",
   "bindingIncomeMaxTenure": "Limited by your income over the maximum tenure banks allow.",
   "bindingIncomeRequestedTenure": "Limited by your income over the tenure you chose.",
