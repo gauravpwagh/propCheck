@@ -229,7 +229,7 @@ class _CostSplitChart extends StatelessWidget {
                 children: [
                   Container(width: 12, height: 12, color: colors[g]),
                   const SizedBox(width: 6),
-                  Text(l.groupLabel(g)),
+                  Flexible(child: Text(l.groupLabel(g))),
                 ],
               ),
           ],

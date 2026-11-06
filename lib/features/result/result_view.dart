@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../app/theme.dart';
 import '../../core/l10n/labels.dart';
 import '../../core/money.dart';
+import '../../core/widgets/label_value.dart';
 import '../../domain/engine/engine.dart';
 import '../../l10n/gen/app_localizations.dart';
 
@@ -152,23 +153,16 @@ class _Breakdown extends StatelessWidget {
               if (byGroup[g] case final entries?) ...[
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Text(l.groupLabel(g), style: t.labelLarge),
-                      ),
-                      Text(
-                        Money.full(entries.fold(0, (a, e) => a + e.value)),
-                        style: t.labelLarge,
-                      ),
-                    ],
+                  child: LabelValue(
+                    label: l.groupLabel(g),
+                    value: Money.full(entries.fold(0, (a, e) => a + e.value)),
+                    style: t.labelLarge,
                   ),
                 ),
                 for (final e in entries)
-                  ListTile(
-                    dense: true,
-                    title: Text(l.lineLabel(e.key)),
-                    trailing: _Amount(e.value),
+                  _LineRow(
+                    label: l.lineLabel(e.key),
+                    value: e.value,
                     onTap: () => showInfoSheet(
                       context,
                       l.lineLabel(e.key),
@@ -177,15 +171,44 @@ class _Breakdown extends StatelessWidget {
                   ),
               ],
             const Divider(),
-            ListTile(
-              title: Text(l.resultTotal, style: t.titleMedium),
-              trailing: _Amount(breakdown.total, style: t.titleMedium),
+            _LineRow(
+              label: l.resultTotal,
+              value: breakdown.total,
+              style: t.titleMedium,
             ),
           ],
         ),
       ),
     );
   }
+}
+
+/// A line item: label wraps, amount stays on the right. Unlike ListTile's
+/// trailing slot this doesn't overflow at large text sizes.
+class _LineRow extends StatelessWidget {
+  const _LineRow({
+    required this.label,
+    required this.value,
+    this.onTap,
+    this.style,
+  });
+
+  final String label;
+  final int value;
+  final VoidCallback? onTap;
+  final TextStyle? style;
+
+  @override
+  Widget build(BuildContext context) => InkWell(
+    onTap: onTap,
+    child: ConstrainedBox(
+      constraints: const BoxConstraints(minHeight: 48),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: LabelValue(label: label, value: Money.full(value), style: style),
+      ),
+    ),
+  );
 }
 
 class _LoanCard extends StatelessWidget {
@@ -228,12 +251,7 @@ class _LoanCard extends StatelessWidget {
 
   Widget _row(String label, String value) => Padding(
     padding: const EdgeInsets.symmetric(vertical: 2),
-    child: Row(
-      children: [
-        Expanded(child: Text(label)),
-        Text(value),
-      ],
-    ),
+    child: LabelValue(label: label, value: value),
   );
 }
 
@@ -265,12 +283,7 @@ class _PerSqftCard extends StatelessWidget {
             for (final (label, value) in rows)
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 2),
-                child: Row(
-                  children: [
-                    Expanded(child: Text(label)),
-                    Text(value),
-                  ],
-                ),
+                child: LabelValue(label: label, value: value),
               ),
           ],
         ),

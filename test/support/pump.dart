@@ -19,6 +19,7 @@ Future<ProviderContainer> pumpWithProfile(
   Widget child,
   RateProfile profile, {
   List<Override> overrides = const [],
+  Brightness brightness = Brightness.light,
 }) async {
   final container = ProviderContainer(
     overrides: [
@@ -38,7 +39,7 @@ Future<ProviderContainer> pumpWithProfile(
     UncontrolledProviderScope(
       container: container,
       child: MaterialApp(
-        theme: buildTheme(Brightness.light),
+        theme: buildTheme(brightness),
         localizationsDelegates: const [
           AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
