@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "profiles": [
+    {
+      "id": "mumbai_bmc",
+      "city": "Mumbai (BMC)",
+      "version": 1,
+      "as_of": "2026-11-06",
+      "is_bundled": true,
+      "stamp_duty_pct": { "male": 6.0, "female": 5.0, "joint": 5.5 },
+      "includes_metro_cess": true,
+      "registration_pct": 1.0,
+      "registration_cap_inr": 30000,
+      "gst_pct": {
+        "under_construction_standard": 5.0,
+        "under_construction_affordable": 1.0,
+        "ready_possession": 0.0,
+        "resale": 0.0
+      },
+      "affordable_housing": { "max_carpet_sqm": 60, "max_value_inr": 4500000 },
+      "tds": { "pct": 1.0, "threshold_inr": 5000000 },
+      "brokerage_pct_default": 1.0,
+      "service_gst_pct": 18.0,
+      "society_transfer_fee_inr": 25000,
+      "maintenance_rate_psf_month": 6,
+      "advance_maintenance_months": { "under_construction": 24, "ready_possession": 24, "resale": 0 },
+      "legal_fees_inr": 25000,
+      "loan_processing_pct": 0.5,
+      "mortgage_stamp_duty": { "pct": 0.3, "cap_inr": 10000 },
+      "pre_emi_avg_disbursed_fraction": 0.5,
+      "interiors_inr": { "1RK": 200000, "1BHK": 400000, "2BHK": 600000 },
+      "renovation_psf_by_age": [
+        { "min_age": 0, "max_age": 9, "psf": 0 },
+        { "min_age": 10, "max_age": 25, "psf": 150 },
+        { "min_age": 26, "max_age": 999, "psf": 300 }
+      ],
+      "default_carpet_sqft": { "1RK": 300, "1BHK": 400, "2BHK": 650 },
+      "builtup_to_carpet_ratio": 1.2,
+      "loan": {
+        "interest_pct": 8.5,
+        "foir_pct": 50,
+        "max_tenure_years": 30,
+        "retirement_age": { "salaried": 60, "self_employed": 65 },
+        "assumed_building_life_years": 60,
+        "building_life_buffer_years": 5,
+        "valuation_haircut_pct": 0,
+        "ltv_slabs": [
+          { "max_value_inr": 3000000, "ltv_pct": 90 },
+          { "max_value_inr": 7500000, "ltv_pct": 80 },
+          { "max_value_inr": null, "ltv_pct": 75 }
+        ]
+      },
+      "flag_thresholds": {
+        "old_building_age": 30,
+        "very_old_building_age": 40,
+        "gst_edge_band_inr": 200000,
+        "high_loading_pct": 30,
+        "below_market_ratio": 0.8
+      },
+      "sources": [
+        { "title": "Bajaj Finserv – Stamp duty Mumbai 2026", "url": "https://www.bajajfinserv.in/stamp-duty-and-property-registration-charges-mumbai" },
+        { "title": "Bajaj Finserv – GST on housing", "url": "https://www.bajajfinserv.in/reduction-in-gst-rate-on-housing" }
+      ]
+    }
+  ]
+}

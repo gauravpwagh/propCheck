@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-11-06",
+  "steps": [
+    {"id": "uc_rera_check", "statuses": ["under_construction"], "order": 1, "title": "Check the project on MahaRERA", "detail": "Confirm registration, completion date, quarterly progress reports and complaints against the developer.", "link": "https://maharera.maharashtra.gov.in"},
+    {"id": "uc_cost_sheet", "statuses": ["under_construction"], "order": 2, "title": "Get the full cost sheet in writing", "detail": "Confirm the GST slab and every extra: parking, floor rise, PLC, clubhouse, development charges, corpus, advance maintenance."},
+    {"id": "uc_legal_review", "statuses": ["under_construction"], "order": 3, "title": "Lawyer reviews title and agreement", "detail": "Title, commencement certificate, approved plans and the draft agreement (RERA model format)."},
+    {"id": "uc_loan_ipa", "statuses": ["under_construction"], "order": 4, "condition": "using_loan", "title": "Get loan in-principle approval", "detail": "Confirm your bank has approved this project."},
+    {"id": "uc_booking", "statuses": ["under_construction"], "order": 5, "title": "Pay booking amount safely", "detail": "Pay at most 10% before a registered agreement, only into the project's RERA designated account."},
+    {"id": "uc_register", "statuses": ["under_construction"], "order": 6, "title": "Register the agreement for sale", "detail": "Pay stamp duty and registration; deduct and file TDS if applicable."},
+    {"id": "uc_stage_payments", "statuses": ["under_construction"], "order": 7, "title": "Pay against construction stages", "detail": "Link payments to construction milestones, not dates. Keep every receipt."},
+    {"id": "uc_possession", "statuses": ["under_construction"], "order": 8, "title": "Take possession carefully", "detail": "Get the OC copy, do a snag inspection, collect the possession letter and society membership."},
+
+    {"id": "rp_oc_check", "statuses": ["ready_possession"], "order": 1, "title": "Confirm the OC is issued", "detail": "The occupancy certificate must be issued (not just applied for) and cover this flat."},
+    {"id": "rp_cost_sheet", "statuses": ["ready_possession"], "order": 2, "title": "Get the full cost sheet", "detail": "Parking, corpus, advance maintenance and society charges in writing."},
+    {"id": "rp_legal", "statuses": ["ready_possession"], "order": 3, "title": "Lawyer title search and agreement review", "detail": "Check title and that the agreement matches the cost sheet."},
+    {"id": "rp_loan", "statuses": ["ready_possession"], "order": 4, "condition": "using_loan", "title": "Loan sanction", "detail": "Bank completes its legal and technical checks."},
+    {"id": "rp_register", "statuses": ["ready_possession"], "order": 5, "title": "Register the agreement", "detail": "Pay stamp duty, registration and TDS if applicable."},
+    {"id": "rp_possession", "statuses": ["ready_possession"], "order": 6, "title": "Possession and transfers", "detail": "Society share certificate, electricity and property tax in your name."},
+
+    {"id": "rs_identity", "statuses": ["resale"], "order": 1, "title": "Verify the seller's identity", "detail": "Match the seller's ID with Index II, the share certificate and society records, in person."},
+    {"id": "rs_title_search", "statuses": ["resale"], "order": 2, "title": "Lawyer title search", "detail": "30-year title search, IGR Index II and CERSAI search for existing charges.", "link": "https://igrmaharashtra.gov.in"},
+    {"id": "rs_society", "statuses": ["resale"], "order": 3, "title": "Society NOC and dues", "detail": "Get the NOC, a dues-clearance letter and the transfer charge in writing."},
+    {"id": "rs_seller_loan_docs", "statuses": ["resale"], "order": 4, "condition": "seller_loan", "title": "Get the seller bank's letters", "detail": "Foreclosure statement with validity date and a list of original documents held by the bank."},
+    {"id": "rs_loan", "statuses": ["resale"], "order": 5, "condition": "using_loan", "title": "Loan sanction and valuation", "detail": "Bank valuation and building residual-life check; renegotiate if valuation is low."},
+    {"id": "rs_register", "statuses": ["resale"], "order": 6, "title": "Token, agreement and registration", "detail": "Pay token by bank transfer against a receipt; register the agreement; pay stamp duty and TDS."},
+    {"id": "rs_payoff", "statuses": ["resale"], "order": 7, "condition": "seller_loan", "title": "Pay off the seller's loan directly", "detail": "Pay the seller's bank, collect the originals and the loan closure letter."},
+    {"id": "rs_transfer", "statuses": ["resale"], "order": 8, "title": "Society and utility transfers", "detail": "Share certificate endorsement, electricity and property tax transfer."}
+  ]
+}

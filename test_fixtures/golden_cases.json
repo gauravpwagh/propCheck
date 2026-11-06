@@ -1,0 +1,678 @@
+{
+  "generated_by": "tools/reference_engine.py",
+  "profile_id": "mumbai_bmc",
+  "profile_version": 1,
+  "rounding": "each line item rounded to nearest rupee, half up",
+  "cases": [
+    {
+      "name": "resale_1bhk_1cr_seller_loan",
+      "mode": "price_to_total",
+      "input": {
+        "status": "resale",
+        "type": "1BHK",
+        "quoted_price": 10000000,
+        "carpet_sqft": 450,
+        "builtup_sqft": 540,
+        "ownership": "male",
+        "building_year": 2005,
+        "has_oc": true,
+        "seller_loan": 4000000,
+        "brokerage_pct": 1.0,
+        "transfer_fee": 25000,
+        "current_year": 2026,
+        "finance": {
+          "using_loan": true,
+          "age": 32,
+          "employment": "salaried",
+          "net_income": 200000,
+          "existing_emi": 0,
+          "rate_pct": 8.5,
+          "tenure_years": 20,
+          "own_funds": 3000000
+        }
+      },
+      "expected": {
+        "lines": {
+          "agreement_value": 10000000,
+          "stamp_duty": 600000,
+          "registration": 30000,
+          "gst": 0,
+          "advance_maintenance": 0,
+          "society_transfer": 25000,
+          "brokerage": 118000,
+          "renovation": 67500,
+          "loan_processing": 44250,
+          "mortgage_stamp_duty": 10000,
+          "legal": 25000,
+          "interiors": 400000
+        },
+        "total": 11319750,
+        "extra_over_quoted": 1319750,
+        "extra_pct_of_quoted": 13.2,
+        "gst_pct_applied": 0.0,
+        "affordable_housing": false,
+        "loan": {
+          "loan": 7500000,
+          "tenure_years": 20,
+          "binding": "ltv",
+          "emi": 65087,
+          "loan_by_income": 11523084,
+          "loan_by_ltv": 7500000,
+          "residual_life_years": 34
+        },
+        "own_funds_needed": 3819750,
+        "tds_applicable": true,
+        "tds_amount": 100000,
+        "seller_bank_payoff": 4000000,
+        "per_sqft": {
+          "quoted_carpet": 22222,
+          "quoted_builtup": 18519,
+          "all_in_carpet": 25155,
+          "all_in_builtup": 20963,
+          "loading_pct": 20.0
+        },
+        "building_age": 21,
+        "flags": [
+          {
+            "id": "funds_shortfall",
+            "severity": "critical"
+          },
+          {
+            "id": "seller_loan",
+            "severity": "warning"
+          }
+        ]
+      }
+    },
+    {
+      "name": "uc_1bhk_1cr_parking_in_agreement",
+      "mode": "price_to_total",
+      "input": {
+        "status": "under_construction",
+        "type": "1BHK",
+        "quoted_price": 9500000,
+        "carpet_sqft": 420,
+        "ownership": "male",
+        "rera_number": "P51800000000",
+        "extras": [
+          {
+            "kind": "parking",
+            "amount": 500000,
+            "in_agreement": true
+          },
+          {
+            "kind": "clubhouse",
+            "amount": 150000,
+            "in_agreement": false
+          }
+        ],
+        "corpus": 50000,
+        "months_to_possession": 30,
+        "monthly_rent": 25000,
+        "current_year": 2026,
+        "finance": {
+          "using_loan": true,
+          "age": 32,
+          "employment": "salaried",
+          "net_income": 200000,
+          "existing_emi": 0,
+          "rate_pct": 8.5,
+          "tenure_years": 20,
+          "own_funds": 4000000
+        }
+      },
+      "expected": {
+        "lines": {
+          "agreement_value": 10000000,
+          "stamp_duty": 600000,
+          "registration": 30000,
+          "gst": 500000,
+          "builder_extras_outside_agreement": 150000,
+          "corpus": 50000,
+          "advance_maintenance": 60480,
+          "loan_processing": 44250,
+          "mortgage_stamp_duty": 10000,
+          "legal": 25000,
+          "pre_emi_interest": 796875,
+          "rent_overlap": 750000,
+          "interiors": 400000
+        },
+        "total": 13416605,
+        "extra_over_quoted": 3916605,
+        "extra_pct_of_quoted": 41.23,
+        "gst_pct_applied": 5.0,
+        "affordable_housing": false,
+        "loan": {
+          "loan": 7500000,
+          "tenure_years": 20,
+          "binding": "ltv",
+          "emi": 65087,
+          "loan_by_income": 11523084,
+          "loan_by_ltv": 7500000,
+          "residual_life_years": null
+        },
+        "own_funds_needed": 5916605,
+        "tds_applicable": true,
+        "tds_amount": 100000,
+        "seller_bank_payoff": 0,
+        "per_sqft": {
+          "quoted_carpet": 22619,
+          "quoted_builtup": 18849,
+          "all_in_carpet": 31944,
+          "all_in_builtup": 26620,
+          "loading_pct": 20.0
+        },
+        "building_age": 0,
+        "flags": [
+          {
+            "id": "funds_shortfall",
+            "severity": "critical"
+          }
+        ]
+      }
+    },
+    {
+      "name": "uc_1rk_affordable_female",
+      "mode": "price_to_total",
+      "input": {
+        "status": "under_construction",
+        "type": "1RK",
+        "quoted_price": 4200000,
+        "carpet_sqft": 320,
+        "ownership": "female",
+        "rera_number": "P51800000001",
+        "months_to_possession": 24,
+        "current_year": 2026,
+        "finance": {
+          "using_loan": true,
+          "age": 32,
+          "employment": "salaried",
+          "net_income": 60000,
+          "existing_emi": 0,
+          "rate_pct": 8.5,
+          "tenure_years": 20,
+          "own_funds": 1200000
+        }
+      },
+      "expected": {
+        "lines": {
+          "agreement_value": 4200000,
+          "stamp_duty": 210000,
+          "registration": 30000,
+          "gst": 42000,
+          "builder_extras_outside_agreement": 0,
+          "corpus": 0,
+          "advance_maintenance": 46080,
+          "loan_processing": 19824,
+          "mortgage_stamp_duty": 10000,
+          "legal": 25000,
+          "pre_emi_interest": 285600,
+          "rent_overlap": 0,
+          "interiors": 200000
+        },
+        "total": 5068504,
+        "extra_over_quoted": 868504,
+        "extra_pct_of_quoted": 20.68,
+        "gst_pct_applied": 1.0,
+        "affordable_housing": true,
+        "loan": {
+          "loan": 3360000,
+          "tenure_years": 20,
+          "binding": "ltv",
+          "emi": 29159,
+          "loan_by_income": 3456925,
+          "loan_by_ltv": 3360000,
+          "residual_life_years": null
+        },
+        "own_funds_needed": 1708504,
+        "tds_applicable": false,
+        "tds_amount": 0,
+        "seller_bank_payoff": 0,
+        "per_sqft": {
+          "quoted_carpet": 13125,
+          "quoted_builtup": 10938,
+          "all_in_carpet": 15839,
+          "all_in_builtup": 13199,
+          "loading_pct": 20.0
+        },
+        "building_age": 0,
+        "flags": [
+          {
+            "id": "funds_shortfall",
+            "severity": "critical"
+          }
+        ]
+      }
+    },
+    {
+      "name": "uc_gst_slab_edge",
+      "mode": "price_to_total",
+      "input": {
+        "status": "under_construction",
+        "type": "1BHK",
+        "quoted_price": 4550000,
+        "carpet_sqft": 400,
+        "ownership": "male",
+        "rera_number": "P51800000002",
+        "months_to_possession": 24,
+        "current_year": 2026,
+        "finance": {
+          "using_loan": false
+        }
+      },
+      "expected": {
+        "lines": {
+          "agreement_value": 4550000,
+          "stamp_duty": 273000,
+          "registration": 30000,
+          "gst": 227500,
+          "builder_extras_outside_agreement": 0,
+          "corpus": 0,
+          "advance_maintenance": 57600,
+          "legal": 25000,
+          "pre_emi_interest": 0,
+          "rent_overlap": 0,
+          "interiors": 400000
+        },
+        "total": 5563100,
+        "extra_over_quoted": 1013100,
+        "extra_pct_of_quoted": 22.27,
+        "gst_pct_applied": 5.0,
+        "affordable_housing": false,
+        "loan": {
+          "loan": 0,
+          "tenure_years": 0,
+          "binding": "no_loan",
+          "emi": 0,
+          "loan_by_income": 0,
+          "loan_by_ltv": 0,
+          "residual_life_years": null
+        },
+        "own_funds_needed": 5563100,
+        "tds_applicable": false,
+        "tds_amount": 0,
+        "seller_bank_payoff": 0,
+        "per_sqft": {
+          "quoted_carpet": 11375,
+          "quoted_builtup": 9479,
+          "all_in_carpet": 13908,
+          "all_in_builtup": 11590,
+          "loading_pct": 20.0
+        },
+        "building_age": 0,
+        "flags": [
+          {
+            "id": "gst_slab_edge",
+            "severity": "warning"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ready_2bhk_joint_rrv_higher",
+      "mode": "price_to_total",
+      "input": {
+        "status": "ready_possession",
+        "type": "2BHK",
+        "quoted_price": 16000000,
+        "carpet_sqft": 700,
+        "builtup_sqft": 950,
+        "ownership": "joint",
+        "ready_reckoner_value": 17000000,
+        "has_oc": true,
+        "extras": [
+          {
+            "kind": "parking",
+            "amount": 800000,
+            "in_agreement": true
+          }
+        ],
+        "corpus": 100000,
+        "current_year": 2026,
+        "finance": {
+          "using_loan": true,
+          "age": 32,
+          "employment": "salaried",
+          "net_income": 350000,
+          "existing_emi": 0,
+          "rate_pct": 8.5,
+          "tenure_years": 20,
+          "own_funds": 6000000
+        }
+      },
+      "expected": {
+        "lines": {
+          "agreement_value": 16800000,
+          "stamp_duty": 935000,
+          "registration": 30000,
+          "gst": 0,
+          "builder_extras_outside_agreement": 0,
+          "corpus": 100000,
+          "advance_maintenance": 100800,
+          "loan_processing": 74340,
+          "mortgage_stamp_duty": 10000,
+          "legal": 25000,
+          "interiors": 600000
+        },
+        "total": 18675140,
+        "extra_over_quoted": 2675140,
+        "extra_pct_of_quoted": 16.72,
+        "gst_pct_applied": 0.0,
+        "affordable_housing": false,
+        "loan": {
+          "loan": 12600000,
+          "tenure_years": 20,
+          "binding": "ltv",
+          "emi": 109346,
+          "loan_by_income": 20165397,
+          "loan_by_ltv": 12600000,
+          "residual_life_years": null
+        },
+        "own_funds_needed": 6075140,
+        "tds_applicable": true,
+        "tds_amount": 168000,
+        "seller_bank_payoff": 0,
+        "per_sqft": {
+          "quoted_carpet": 22857,
+          "quoted_builtup": 16842,
+          "all_in_carpet": 26679,
+          "all_in_builtup": 19658,
+          "loading_pct": 35.71
+        },
+        "building_age": 0,
+        "flags": [
+          {
+            "id": "stamp_on_ready_reckoner",
+            "severity": "info"
+          },
+          {
+            "id": "funds_shortfall",
+            "severity": "critical"
+          },
+          {
+            "id": "high_loading",
+            "severity": "info"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resale_old_building_1975",
+      "mode": "price_to_total",
+      "input": {
+        "status": "resale",
+        "type": "1BHK",
+        "quoted_price": 8500000,
+        "carpet_sqft": 400,
+        "ownership": "male",
+        "building_year": 1975,
+        "has_oc": true,
+        "current_year": 2026,
+        "finance": {
+          "using_loan": true,
+          "age": 32,
+          "employment": "salaried",
+          "net_income": 200000,
+          "existing_emi": 0,
+          "rate_pct": 8.5,
+          "tenure_years": 20,
+          "own_funds": 2500000
+        }
+      },
+      "expected": {
+        "lines": {
+          "agreement_value": 8500000,
+          "stamp_duty": 510000,
+          "registration": 30000,
+          "gst": 0,
+          "advance_maintenance": 0,
+          "society_transfer": 25000,
+          "brokerage": 100300,
+          "renovation": 120000,
+          "loan_processing": 23937,
+          "mortgage_stamp_duty": 10000,
+          "legal": 25000,
+          "interiors": 400000
+        },
+        "total": 9744237,
+        "extra_over_quoted": 1244237,
+        "extra_pct_of_quoted": 14.64,
+        "gst_pct_applied": 0.0,
+        "affordable_housing": false,
+        "loan": {
+          "loan": 4057074,
+          "tenure_years": 4,
+          "binding": "income_building_life",
+          "emi": 100000,
+          "loan_by_income": 4057074,
+          "loan_by_ltv": 6375000,
+          "residual_life_years": 4
+        },
+        "own_funds_needed": 5687163,
+        "tds_applicable": true,
+        "tds_amount": 85000,
+        "seller_bank_payoff": 0,
+        "per_sqft": {
+          "quoted_carpet": 21250,
+          "quoted_builtup": 17708,
+          "all_in_carpet": 24361,
+          "all_in_builtup": 20300,
+          "loading_pct": 20.0
+        },
+        "building_age": 51,
+        "flags": [
+          {
+            "id": "very_old_building",
+            "severity": "critical"
+          },
+          {
+            "id": "funds_shortfall",
+            "severity": "critical"
+          },
+          {
+            "id": "tenure_cut_by_building",
+            "severity": "warning"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resale_no_oc_no_loan",
+      "mode": "price_to_total",
+      "input": {
+        "status": "resale",
+        "type": "1RK",
+        "quoted_price": 3500000,
+        "carpet_sqft": 280,
+        "ownership": "female",
+        "building_year": 1998,
+        "has_oc": false,
+        "current_year": 2026,
+        "area_reference_psf": 18000,
+        "finance": {
+          "using_loan": false
+        }
+      },
+      "expected": {
+        "lines": {
+          "agreement_value": 3500000,
+          "stamp_duty": 175000,
+          "registration": 30000,
+          "gst": 0,
+          "advance_maintenance": 0,
+          "society_transfer": 25000,
+          "brokerage": 41300,
+          "renovation": 84000,
+          "legal": 25000,
+          "interiors": 200000
+        },
+        "total": 4080300,
+        "extra_over_quoted": 580300,
+        "extra_pct_of_quoted": 16.58,
+        "gst_pct_applied": 0.0,
+        "affordable_housing": false,
+        "loan": {
+          "loan": 0,
+          "tenure_years": 0,
+          "binding": "no_loan",
+          "emi": 0,
+          "loan_by_income": 0,
+          "loan_by_ltv": 0,
+          "residual_life_years": null
+        },
+        "own_funds_needed": 4080300,
+        "tds_applicable": false,
+        "tds_amount": 0,
+        "seller_bank_payoff": 0,
+        "per_sqft": {
+          "quoted_carpet": 12500,
+          "quoted_builtup": 10417,
+          "all_in_carpet": 14573,
+          "all_in_builtup": 12144,
+          "loading_pct": 20.0
+        },
+        "building_age": 28,
+        "flags": [
+          {
+            "id": "no_oc",
+            "severity": "critical"
+          },
+          {
+            "id": "below_market_price",
+            "severity": "warning"
+          }
+        ]
+      }
+    },
+    {
+      "name": "budget_resale_1bhk_1_2cr",
+      "mode": "budget_to_price",
+      "budget": 12000000,
+      "input": {
+        "status": "resale",
+        "type": "1BHK",
+        "quoted_price": 1,
+        "carpet_sqft": 450,
+        "builtup_sqft": 540,
+        "ownership": "male",
+        "building_year": 2010,
+        "has_oc": true,
+        "current_year": 2026,
+        "finance": {
+          "using_loan": true,
+          "age": 32,
+          "employment": "salaried",
+          "net_income": 250000,
+          "existing_emi": 0,
+          "rate_pct": 8.5,
+          "tenure_years": 20
+        }
+      },
+      "expected_max_price": 10630000,
+      "expected": {
+        "lines": {
+          "agreement_value": 10630000,
+          "stamp_duty": 637800,
+          "registration": 30000,
+          "gst": 0,
+          "advance_maintenance": 0,
+          "society_transfer": 25000,
+          "brokerage": 125434,
+          "renovation": 67500,
+          "loan_processing": 47038,
+          "mortgage_stamp_duty": 10000,
+          "legal": 25000,
+          "interiors": 400000
+        },
+        "total": 11997772,
+        "extra_over_quoted": 1367772,
+        "extra_pct_of_quoted": 12.87,
+        "gst_pct_applied": 0.0,
+        "affordable_housing": false,
+        "loan": {
+          "loan": 7972500,
+          "tenure_years": 20,
+          "binding": "ltv",
+          "emi": 69187,
+          "loan_by_income": 14403855,
+          "loan_by_ltv": 7972500,
+          "residual_life_years": 39
+        },
+        "own_funds_needed": 4025272,
+        "tds_applicable": true,
+        "tds_amount": 106300,
+        "seller_bank_payoff": 0,
+        "per_sqft": {
+          "quoted_carpet": 23622,
+          "quoted_builtup": 19685,
+          "all_in_carpet": 26662,
+          "all_in_builtup": 22218,
+          "loading_pct": 20.0
+        },
+        "building_age": 16,
+        "flags": []
+      }
+    },
+    {
+      "name": "budget_uc_1bhk_50l_near_slab",
+      "mode": "budget_to_price",
+      "budget": 5000000,
+      "input": {
+        "status": "under_construction",
+        "type": "1BHK",
+        "quoted_price": 1,
+        "carpet_sqft": 380,
+        "ownership": "male",
+        "rera_number": "P51800000003",
+        "months_to_possession": 24,
+        "current_year": 2026,
+        "finance": {
+          "using_loan": false
+        }
+      },
+      "expected_max_price": 4190000,
+      "expected": {
+        "lines": {
+          "agreement_value": 4190000,
+          "stamp_duty": 251400,
+          "registration": 30000,
+          "gst": 41900,
+          "builder_extras_outside_agreement": 0,
+          "corpus": 0,
+          "advance_maintenance": 54720,
+          "legal": 25000,
+          "pre_emi_interest": 0,
+          "rent_overlap": 0,
+          "interiors": 400000
+        },
+        "total": 4993020,
+        "extra_over_quoted": 803020,
+        "extra_pct_of_quoted": 19.17,
+        "gst_pct_applied": 1.0,
+        "affordable_housing": true,
+        "loan": {
+          "loan": 0,
+          "tenure_years": 0,
+          "binding": "no_loan",
+          "emi": 0,
+          "loan_by_income": 0,
+          "loan_by_ltv": 0,
+          "residual_life_years": null
+        },
+        "own_funds_needed": 4993020,
+        "tds_applicable": false,
+        "tds_amount": 0,
+        "seller_bank_payoff": 0,
+        "per_sqft": {
+          "quoted_carpet": 11026,
+          "quoted_builtup": 9189,
+          "all_in_carpet": 13140,
+          "all_in_builtup": 10950,
+          "loading_pct": 20.0
+        },
+        "building_age": 0,
+        "flags": []
+      }
+    }
+  ]
+}

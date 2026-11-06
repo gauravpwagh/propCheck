@@ -1,0 +1,237 @@
+{
+  "schema_version": "1.0",
+  "region": "Mumbai Metropolitan Region (MMR)",
+  "as_of": "2026-11-06",
+  "generated_by": "Initial manual survey (Claude, web search)",
+  "disclaimer": "Compiled from news reports and public sources. Cases are allegations unless a court has ruled. Not legal advice; verify with a property lawyer.",
+
+  "scam_patterns": [
+    {
+      "id": "double_sale",
+      "title": "Same flat sold to multiple buyers",
+      "severity": "high",
+      "applies_to_status": ["under_construction", "ready_possession", "resale"],
+      "applies_to_areas": ["all"],
+      "how_it_works": "A builder, agent or fake owner takes booking money or registers agreements for one flat with two or more buyers. Often the first buyer has only an allotment letter, not a registered agreement.",
+      "red_flags": [
+        "Only an allotment letter or receipt offered, no registered agreement for sale",
+        "Pressure to pay large amounts in cash or to a personal account",
+        "Price noticeably below nearby flats with an urgency story",
+        "Builder refuses to show the flat on the MahaRERA inventory or the sold-unit list"
+      ],
+      "prevention_checks": [
+        "Search IGR Maharashtra (Index II / e-search) for any earlier registered document on the same flat",
+        "Register the agreement for sale promptly; pay stamp duty in your name",
+        "Pay only to the project's RERA designated bank account (new projects) or the registered owner's account (resale)",
+        "Ask the society secretary in writing whether anyone else has claimed the flat"
+      ],
+      "recent_cases": [
+        {"date": "2026-01-20", "area": "Andheri East (Marol)", "amount_inr": 5600000, "summary": "Two buyers allegedly paid for the same flat; the flat also had an existing loan.", "source_title": "Lokmat Times", "source_url": "https://www.lokmattimes.com/mumbai/mumbai-flat-scam-one-flat-sold-to-two-buyers-for-rs-56-lakh-in-andheri-east-a522/"},
+        {"date": "2025-12-12", "area": "Kasturba Marg (Borivali East)", "amount_inr": 18700000, "summary": "Builder father and son arrested for allegedly selling the same flat to multiple buyers.", "source_title": "Lokmat Times", "source_url": "https://www.lokmattimes.com/mumbai/mumbai-builder-and-his-son-arrested-for-cheating-buyers-of-rs-187-crore-in-flat-sale-fraud-a522/"},
+        {"date": "2026-03-28", "area": "Mahim", "amount_inr": 25200000, "summary": "Developer directors booked for alleged fake flat promises and resale of the same flat to others.", "source_title": "Free Press Journal", "source_url": "https://www.freepressjournal.in/mumbai/mumbai-news-mahim-police-file-252-crore-fraud-case-against-builders-for-fake-flat-promises-2-directors-booked-under-bns"},
+        {"date": "2025", "area": "Wadala", "amount_inr": 1000000000, "summary": "Developer booked after a stalled project; a buyer found his booked flat was sold to someone else. Losses estimated above Rs 100 crore.", "source_title": "Housiey", "source_url": "https://housiey.com/blogs/?p=8504"}
+      ]
+    },
+    {
+      "id": "fake_owner_listing",
+      "title": "Fake owner / fake online listing (resale)",
+      "severity": "high",
+      "applies_to_status": ["resale"],
+      "applies_to_areas": ["all"],
+      "how_it_works": "Fraudsters post a real flat on property portals, show it, and impersonate the owner with forged Aadhaar/PAN. They collect token and part payments, then disappear.",
+      "red_flags": [
+        "Owner unavailable except through one 'broker'",
+        "Owner name on ID does not match Index II, share certificate or electricity bill",
+        "Urgent sale story (moving abroad, medical emergency) and below-market price",
+        "Request to pay token by UPI to a third party"
+      ],
+      "prevention_checks": [
+        "Match the seller's ID with the share certificate, Index II and society records in person",
+        "Meet the seller at the society office; get the secretary to confirm identity",
+        "Pay token only by cheque/transfer to the owner's own account, against a written receipt",
+        "Have a lawyer do a title search before paying more than a small token"
+      ],
+      "recent_cases": [
+        {"date": "2026-01-20", "area": "Malad", "amount_inr": 3000000, "summary": "Police arrested six people who posted fake listings and used an impersonator with forged IDs as the owner.", "source_title": "Free Press Journal", "source_url": "https://www.freepressjournal.in/mumbai/mumbai-fraud-news-malad-police-bust-online-housing-scam-6-arrested-for-duping-buyers-of-lakhs"},
+        {"date": "2026-01-06", "area": "Dahisar West", "amount_inr": 2955000, "summary": "A buyer paid part of the price to a fake owner and broker; the flat belonged to someone else.", "source_title": "Free Press Journal", "source_url": "https://www.freepressjournal.in/mumbai/mumbai-chartered-accountant-loses-2955-lakh-in-dahisar-property-scam-by-fake-owner-broker"}
+      ]
+    },
+    {
+      "id": "undisclosed_loan",
+      "title": "Undisclosed loan or charge on the flat",
+      "severity": "high",
+      "applies_to_status": ["resale"],
+      "applies_to_areas": ["all"],
+      "how_it_works": "The seller hides an existing home loan or mortgage. Original documents sit with a lender and the buyer cannot get clear title.",
+      "red_flags": [
+        "Seller has only photocopies of the chain documents",
+        "Seller avoids giving a bank's list of documents or foreclosure letter",
+        "Society records show a lien on the share certificate"
+      ],
+      "prevention_checks": [
+        "Search CERSAI for registered charges on the property",
+        "Ask the society for its lien register and NOC",
+        "If a loan exists, pay the outstanding directly to the seller's bank and collect originals + closure letter"
+      ],
+      "recent_cases": [
+        {"date": "2026-03-08", "area": "Nalasopara", "amount_inr": 4472130, "summary": "Buyer alleges the sellers hid a loan on the flat; police registered a cheating case.", "source_title": "Free Press Journal", "source_url": "https://www.freepressjournal.in/mumbai/nalasopara-flat-deal-fraud-3-booked-for-cheating-doctor-in-44-lakh-undisclosed-loan-property-scam"}
+      ]
+    },
+    {
+      "id": "illegal_building_forged_permits",
+      "title": "Illegal building with forged CC/OC or RERA registration",
+      "severity": "critical",
+      "applies_to_status": ["under_construction", "ready_possession", "resale"],
+      "applies_to_areas": ["Vasai-Virar", "Nalasopara", "Mira-Bhayandar", "Kalyan-Dombivli", "Thane", "Bhiwandi", "Ulhasnagar"],
+      "how_it_works": "Buildings are put up on reserved or unapproved land with forged commencement/occupancy certificates. Some even got MahaRERA registration using fake papers. Courts have ordered demolitions, leaving buyers homeless.",
+      "red_flags": [
+        "Price far below the area rate for a 'new' building",
+        "Builder cannot show CC/OC on the municipal portal, only paper copies",
+        "Land is on a development-plan reservation (garden, STP, dumping ground)",
+        "Many banks refuse to lend on the project"
+      ],
+      "prevention_checks": [
+        "Verify CC/OC number directly with the municipal corporation (e.g. VVCMC approved building list)",
+        "Check the development plan reservation for the survey number",
+        "Do not rely on RERA registration alone",
+        "Prefer projects where a major bank has approved project finance"
+      ],
+      "recent_cases": [
+        {"date": "2025-02-20", "area": "Vasai-Virar (Nalasopara)", "amount_inr": null, "summary": "41 illegal buildings on land reserved for a sewage plant and dumping ground were demolished on court orders; about 2,500 families displaced. ED probe ongoing.", "source_title": "The Logical Indian", "source_url": "https://thelogicalindian.com/vasai-virar-%e2%82%b91000-crore-scam-ed-seizes-%e2%82%b932-crore-41-illegal-buildings-demolished-2500-families-displaced-as-probe-continues/"},
+        {"date": "2023-08-11", "area": "Vasai-Virar", "amount_inr": null, "summary": "Police probed 55 buildings built with forged documents and sold to about 3,500 families; some had RERA registration.", "source_title": "Lokmat Times", "source_url": "https://www.lokmattimes.com/maharashtra/virar-police-begin-investigating-55-illegal-buildings-after-major-real-estate-scam-expose-a475"},
+        {"date": "2026-10-21", "area": "Mira-Bhayandar / Vasai-Virar", "amount_inr": null, "summary": "Two builders arrested for an eight-storey building allegedly built on a fake CC; 113 flats sold.", "source_title": "ThePrint (PTI)", "source_url": "https://theprint.in/india/two-builders-held-for-cheating-flat-buyers-in-mumbai-metropolitan-region/3078062/"},
+        {"date": "2025", "area": "Dombivli (KDMC)", "amount_inr": null, "summary": "Bombay HC refused relief to an illegal building despite RERA registration; KDMC began action on 65 illegal buildings.", "source_title": "Free Press Journal", "source_url": "https://www.freepressjournal.in/mumbai/bombay-hc-refuses-relief-to-illegal-dombivli-building-despite-rera-registration-tells-buyers-to-sue-developer-kdmc"}
+      ]
+    },
+    {
+      "id": "sra_redevelopment_sale_component",
+      "title": "SRA / redevelopment sale-component fraud",
+      "severity": "high",
+      "applies_to_status": ["under_construction"],
+      "applies_to_areas": ["Jogeshwari", "Borivali", "Kurla", "Bandra East", "Mulund", "Goregaon", "Vikhroli", "Chinchpokli", "all"],
+      "how_it_works": "In SRA or society redevelopment projects, the developer sells free-sale flats, diverts funds, or sells flats reserved for existing members. If the developer is replaced, earlier buyers may be left out of the new project.",
+      "red_flags": [
+        "Developer cannot show the development agreement or SRA Letter of Intent",
+        "Flat number appears in the rehab or member allotment list",
+        "Project stalled for years or developer changed",
+        "Court order restraining third-party rights on the project"
+      ],
+      "prevention_checks": [
+        "Get the development agreement; confirm who has the right to sell which component",
+        "Check SRA / MHADA approvals and court cases on the project",
+        "Read MahaRERA project page for complaints, revised dates and quarterly updates",
+        "Pay only into the RERA designated account"
+      ],
+      "recent_cases": [
+        {"date": "2026-05-20", "area": "Jogeshwari West", "amount_inr": 106700000, "summary": "EOW arrested a builder over alleged fraud in an SRA project where sale money should have gone to a joint RERA account.", "source_title": "PropNewsTime", "source_url": "https://propnewstime.com/latestnewsstories/MzA1NzI=/mumbai-builder-arrested-in-alleged-inr-10-67-crore-fraud-linked-to-jogeshwari-sra-redevelopment-project"},
+        {"date": "2025-08-12", "area": "Borivali", "amount_inr": 320000000, "summary": "EOW case against nine people for allegedly cheating over 200 buyers in an SRA project.", "source_title": "Free Press Journal", "source_url": "https://www.freepressjournal.in/mumbai/32-crore-sra-housing-scam-9-named-in-fir-for-cheating-over-200-flat-buyers-in-borivali"},
+        {"date": "2026", "area": "Kurla", "amount_inr": null, "summary": "After SRA replaced a defaulting developer, MahaRERA let the new developer start fresh; earlier buyers were left chasing refunds.", "source_title": "SquareFeat India", "source_url": "https://squarefeatindia.com/sra-dream-turns-nightmare-kurla-homebuyers-lose-flats-despite-paying-crores/"},
+        {"date": "2026-04-14", "area": "Vikhroli", "amount_inr": 8400000, "summary": "A redevelopment flat sold to a buyer was allegedly reserved for an original member and under a court restraint.", "source_title": "Free Press Journal", "source_url": "https://www.freepressjournal.in/mumbai/priest-duped-of-84-lakh-in-fake-flat-deal-vikhroli-police-book-middleman-builder-and-punjab-and-sind-bank-officials"}
+      ]
+    },
+    {
+      "id": "fake_govt_scheme",
+      "title": "Fake MHADA / MMRDA / government scheme flats",
+      "severity": "medium",
+      "applies_to_status": ["under_construction", "ready_possession"],
+      "applies_to_areas": ["all"],
+      "how_it_works": "Fraudsters pose as officials or agents and promise cheap MHADA, MMRDA or rehabilitation flats outside the official lottery, collecting fees and advances.",
+      "red_flags": [
+        "Flat 'quota' or 'direct allotment' outside the official lottery",
+        "Price far below market",
+        "Payments to personal accounts or cash"
+      ],
+      "prevention_checks": [
+        "MHADA allots through its official lottery website only",
+        "Never pay an agent for allotment",
+        "Rehab flats generally cannot be sold for a lock-in period; verify transfer eligibility"
+      ],
+      "recent_cases": [
+        {"date": "2026-02-01", "area": "Mumbai", "amount_inr": 24100000, "summary": "Scammers posing as MHADA officials allegedly cheated 61 people with promises of subsidised flats.", "source_title": "Ghar.tv", "source_url": "https://www.ghar.tv/blog/fraudsters-posing-as-mhada-officials-cheat-61-mumbai-homebuyers-of-241-crore-in-fake-flat-scheme/artid5271"},
+        {"date": "2026", "area": "Mumbai", "amount_inr": 15300000, "summary": "Two women booked for allegedly selling fake MMRDA rehabilitation flats to 15 buyers.", "source_title": "Free Press Journal", "source_url": "https://www.freepressjournal.in/amp/mumbai/mumbai-housing-scam-2-women-booked-for-defrauding-15-buyers-of-153-crore-in-fake-mmrda-flat-allotment-scheme"}
+      ]
+    },
+    {
+      "id": "fake_bank_auction",
+      "title": "Fake 'bank-seized' or auction flats",
+      "severity": "medium",
+      "applies_to_status": ["resale"],
+      "applies_to_areas": ["Navi Mumbai", "all"],
+      "how_it_works": "Fraudsters offer discounted flats claimed to be seized by banks and take advances outside the bank's official auction process.",
+      "red_flags": ["Deal not listed on the bank's or e-auction portal", "Payment asked to an individual"],
+      "prevention_checks": ["Buy bank-auction property only through the bank's official SARFAESI auction notice and portal"],
+      "recent_cases": [
+        {"date": "2026-05-06", "area": "Kalamboli, Navi Mumbai", "amount_inr": 1411000, "summary": "Four people allegedly paid for discounted 'bank-seized' flats that were never delivered.", "source_title": "Free Press Journal", "source_url": "https://www.freepressjournal.in/mumbai/navi-mumbai-crime-4-residents-cheated-of-1411-lakh-in-fake-bank-seized-flat-scam-in-kalamboli-case-registered"}
+      ]
+    },
+    {
+      "id": "identity_forgery_title",
+      "title": "Forged sale deed / identity theft of owner",
+      "severity": "high",
+      "applies_to_status": ["resale"],
+      "applies_to_areas": ["all"],
+      "how_it_works": "Fraudsters forge the owner's photo and signature on a sale deed, using genuine ID copies, to sell the flat or raise loans on it.",
+      "red_flags": ["Recent registered transfer the society is unaware of", "Board resolutions or POAs with discrepancies"],
+      "prevention_checks": ["Cross-check the latest Index II with the society share register", "Verify any power of attorney is registered and still valid"],
+      "recent_cases": [
+        {"date": "2025-09-11", "area": "Bandra West", "amount_inr": null, "summary": "A flat already sold in 2020 was allegedly 'sold' again in 2024 using forged documents and fake board resolutions.", "source_title": "Free Press Journal", "source_url": "https://www.freepressjournal.in/mumbai/mumbai-news-flat-sold-twice-using-forged-documents-in-bandra-fir-registered"},
+        {"date": "2025", "area": "Bandra", "amount_inr": 113500000, "summary": "An owner's identity was allegedly forged to raise a large bank loan against his flat.", "source_title": "Free Press Journal", "source_url": "https://www.freepressjournal.in/amp/mumbai/mumbai-fraud-news-bandra-flat-owners-identity-forged-1135-crore-bank-loan-secured-using-fake-documents"}
+      ]
+    },
+    {
+      "id": "stalled_project",
+      "title": "Delayed or stalled under-construction project",
+      "severity": "medium",
+      "applies_to_status": ["under_construction"],
+      "applies_to_areas": ["all"],
+      "how_it_works": "Not always fraud: funds are diverted or the developer runs short, and possession slips by years. Buyers keep paying EMIs and rent.",
+      "red_flags": ["Possession date revised more than once on MahaRERA", "Construction progress far behind the payment schedule", "Many MahaRERA complaints against the developer"],
+      "prevention_checks": ["Read the project's MahaRERA quarterly progress reports", "Link payments to construction stages, not time", "Check developer's track record of delivering past projects with OC"],
+      "recent_cases": [
+        {"date": "2026-05-29", "area": "Mumbai", "amount_inr": null, "summary": "MahaRERA acted again against a Mumbai builder over defects, delays and pending conveyance.", "source_title": "Rentu", "source_url": "https://rentu.in/news/10001369/maharera-pulls-up-mumbai-builder-again-over-defects-and-delayed-conveyance"}
+      ]
+    }
+  ],
+
+  "area_notes": [
+    {"area": "Vasai-Virar / Nalasopara", "risk_tags": ["illegal_building_forged_permits"], "note": "Large number of buildings found on forged permits and reserved land; verify every CC/OC with VVCMC."},
+    {"area": "Mira-Bhayandar", "risk_tags": ["illegal_building_forged_permits"], "note": "Recent arrests for buildings on fake commencement certificates."},
+    {"area": "Kalyan-Dombivli", "risk_tags": ["illegal_building_forged_permits"], "note": "Court-ordered action on dozens of illegal buildings; RERA registration alone did not protect buyers."},
+    {"area": "Western & central suburbs SRA pockets (Jogeshwari, Borivali, Kurla, Goregaon, Bandra East, Mulund)", "risk_tags": ["sra_redevelopment_sale_component"], "note": "Check development agreement and SRA approvals for sale-component flats."},
+    {"area": "Island city redevelopment (Dadar, Mahim, Chinchpokli)", "risk_tags": ["double_sale", "sra_redevelopment_sale_component"], "note": "Multiple cases of the same flat sold twice in redevelopment projects."}
+  ],
+
+  "general_precautions": [
+    "Never pay more than a small token before a lawyer's title search",
+    "Pay only by traceable bank transfer to the right account; no cash component",
+    "Register the agreement for sale; an allotment letter alone gives weak protection",
+    "Check MahaRERA, IGR Index II, CERSAI and society records independently",
+    "Visit the site and society office yourself; talk to neighbours",
+    "Treat a deal far below market as a warning, not a bargain"
+  ],
+
+  "official_verification_links": [
+    {"name": "MahaRERA", "url": "https://maharera.maharashtra.gov.in", "purpose": "Project registration, quarterly progress, complaints, agent registration"},
+    {"name": "IGR Maharashtra", "url": "https://igrmaharashtra.gov.in", "purpose": "Index II / e-search of registered documents, stamp duty, ready reckoner rates"},
+    {"name": "CERSAI", "url": "https://www.cersai.org.in", "purpose": "Search existing mortgages/charges on a property"},
+    {"name": "MahaBhumi", "url": "https://mahabhumi.gov.in", "purpose": "7/12 and property card land records"},
+    {"name": "BMC (MCGM) portal", "url": "https://portal.mcgm.gov.in", "purpose": "Building approvals, property tax dues"},
+    {"name": "VVCMC", "url": "https://www.vvcmc.in", "purpose": "Approved building list for Vasai-Virar"}
+  ],
+
+  "rate_snapshot": {
+    "city": "Mumbai (BMC)",
+    "as_of": "2026-11-06",
+    "stamp_duty_pct": {"male": 6.0, "female": 5.0, "joint_male_female": 5.5},
+    "includes_metro_cess": true,
+    "registration_pct": 1.0,
+    "registration_cap_inr": 30000,
+    "gst_pct": {"under_construction_standard": 5.0, "under_construction_affordable": 1.0, "ready_with_oc": 0.0, "resale": 0.0},
+    "affordable_housing": {"max_carpet_sqm_metro": 60, "max_value_inr": 4500000},
+    "tds_pct_if_value_at_least": {"pct": 1.0, "threshold_inr": 5000000},
+    "sources": [
+      {"title": "Bajaj Finserv – Stamp duty Mumbai 2026", "url": "https://www.bajajfinserv.in/stamp-duty-and-property-registration-charges-mumbai"},
+      {"title": "Bajaj Finserv – GST on housing", "url": "https://www.bajajfinserv.in/reduction-in-gst-rate-on-housing"}
+    ]
+  }
+}
