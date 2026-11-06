@@ -1026,4 +1026,102 @@ class AppLocalizationsEn extends AppLocalizations {
   String compareYears(int years) {
     return '$years yrs';
   }
+
+  @override
+  String get guidanceSteps => 'Steps to buy';
+
+  @override
+  String guidanceStepsProgress(int done, int total) {
+    return '$done of $total done';
+  }
+
+  @override
+  String get guidanceSafetyChecks => 'Safety checks';
+
+  @override
+  String get guidanceSafetyHelp =>
+      'From scam patterns reported in your region.';
+
+  @override
+  String get guidanceOpenLink => 'Open link';
+
+  @override
+  String get guidanceRisks => 'Scams to watch for';
+
+  @override
+  String get guidanceRisksHelp =>
+      'Patterns reported for this kind of purchase. Tap for details.';
+
+  @override
+  String get guidanceAreaMatch => 'Reported in your area';
+
+  @override
+  String get guidanceSeeAll => 'See all scam patterns';
+
+  @override
+  String get guidanceNote => 'Note';
+
+  @override
+  String get guidanceEditNote => 'Edit note';
+
+  @override
+  String riskAsOf(String date) {
+    return 'Risk data as of $date';
+  }
+
+  @override
+  String get riskStale =>
+      'This data may be outdated. Check recent news and update it in Settings.';
+
+  @override
+  String get risksTitle => 'Scam patterns & risks';
+
+  @override
+  String get risksHowItWorks => 'How it works';
+
+  @override
+  String get risksWatchFor => 'Watch for';
+
+  @override
+  String get risksPrevention => 'How to protect yourself';
+
+  @override
+  String get risksRecentCases => 'Recent cases';
+
+  @override
+  String risksCaseAmount(String amount) {
+    return 'Amount: $amount';
+  }
+
+  @override
+  String risksAreas(String areas) {
+    return 'Areas: $areas';
+  }
+
+  @override
+  String get risksAreaNotes => 'Area notes';
+
+  @override
+  String get risksPrecautions => 'General precautions';
+
+  @override
+  String get risksVerify => 'Verify officially';
+
+  @override
+  String get risksSeverityCritical => 'Critical';
+
+  @override
+  String get risksSeverityHigh => 'High';
+
+  @override
+  String get risksSeverityMedium => 'Medium';
+
+  @override
+  String get risksSeverityLow => 'Low';
+
+  @override
+  String get risksLinkError => 'Couldn\'t open the link.';
+
+  @override
+  String get risksAllAreas => 'All areas';
 }

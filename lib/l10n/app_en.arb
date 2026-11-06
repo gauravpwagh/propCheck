@@ -489,5 +489,65 @@
         "type": "int"
       }
     }
-  }
+  },
+  "guidanceSteps": "Steps to buy",
+  "guidanceStepsProgress": "{done} of {total} done",
+  "@guidanceStepsProgress": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "guidanceSafetyChecks": "Safety checks",
+  "guidanceSafetyHelp": "From scam patterns reported in your region.",
+  "guidanceOpenLink": "Open link",
+  "guidanceRisks": "Scams to watch for",
+  "guidanceRisksHelp": "Patterns reported for this kind of purchase. Tap for details.",
+  "guidanceAreaMatch": "Reported in your area",
+  "guidanceSeeAll": "See all scam patterns",
+  "guidanceNote": "Note",
+  "guidanceEditNote": "Edit note",
+  "riskAsOf": "Risk data as of {date}",
+  "@riskAsOf": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "riskStale": "This data may be outdated. Check recent news and update it in Settings.",
+  "risksTitle": "Scam patterns & risks",
+  "risksHowItWorks": "How it works",
+  "risksWatchFor": "Watch for",
+  "risksPrevention": "How to protect yourself",
+  "risksRecentCases": "Recent cases",
+  "risksCaseAmount": "Amount: {amount}",
+  "@risksCaseAmount": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "risksAreas": "Areas: {areas}",
+  "@risksAreas": {
+    "placeholders": {
+      "areas": {
+        "type": "String"
+      }
+    }
+  },
+  "risksAreaNotes": "Area notes",
+  "risksPrecautions": "General precautions",
+  "risksVerify": "Verify officially",
+  "risksSeverityCritical": "Critical",
+  "risksSeverityHigh": "High",
+  "risksSeverityMedium": "Medium",
+  "risksSeverityLow": "Low",
+  "risksLinkError": "Couldn't open the link.",
+  "risksAllAreas": "All areas"
 }
