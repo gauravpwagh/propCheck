@@ -1,0 +1,5 @@
+{
+  "@@locale": "en",
+  "appTitle": "PropCheck",
+  "@appTitle": { "description": "App name shown in the title bar and launcher" }
+}

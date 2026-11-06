@@ -3,13 +3,13 @@
 Work top to bottom. Each milestone ends with `flutter analyze` clean and `flutter test` green. Tick items as you go.
 
 ## M0 – Project setup
-- [ ] In the repo root (handover kit already committed there), run `flutter create --org io.github.gauravpwagh --project-name prop_check --platforms android,ios .`. Don't overwrite `README.md`; merge Flutter's run instructions into it.
-- [ ] Verify the identifiers: `pubspec.yaml` name `prop_check`, Android `applicationId` and `namespace` `io.github.gauravpwagh.propcheck`, iOS `PRODUCT_BUNDLE_IDENTIFIER` `io.github.gauravpwagh.propcheck`, display name "PropCheck" (Android `android:label`, iOS `CFBundleDisplayName`).
-- [ ] Add a Flutter `.gitignore` (keep `tools/` and `test_fixtures/` tracked; ignore `android/key.properties`, `*.jks`).
-- [ ] Commit "M0: Flutter scaffold" on `main` and push to `origin`.
-- [ ] Add packages listed in CLAUDE.md; enable `flutter_lints` (strict) and `build_runner`.
-- [ ] Register `assets/data/` in `pubspec.yaml`; set up `lib/l10n/app_en.arb` with `intl` generation.
-- [ ] Create the folder skeleton from SPEC §8 / plan: `app/`, `core/`, `domain/`, `data/`, `features/`.
+- [x] In the repo root (handover kit already committed there), run `flutter create --org io.github.gauravpwagh --project-name prop_check --platforms android,ios .`. Don't overwrite `README.md`; merge Flutter's run instructions into it.
+- [x] Verify the identifiers: `pubspec.yaml` name `prop_check`, Android `applicationId` and `namespace` `io.github.gauravpwagh.propcheck`, iOS `PRODUCT_BUNDLE_IDENTIFIER` `io.github.gauravpwagh.propcheck`, display name "PropCheck" (Android `android:label`, iOS `CFBundleDisplayName`).
+- [x] Add a Flutter `.gitignore` (keep `tools/` and `test_fixtures/` tracked; ignore `android/key.properties`, `*.jks`).
+- [x] Commit "M0: Flutter scaffold" on `main` and push to `origin`.
+- [x] Add packages listed in CLAUDE.md; enable `flutter_lints` (strict) and `build_runner`.
+- [x] Register `assets/data/` in `pubspec.yaml`; set up `lib/l10n/app_en.arb` with `intl` generation.
+- [x] Create the folder skeleton from SPEC §8 / plan: `app/`, `core/`, `domain/`, `data/`, `features/`.
 
 ## M1 – Domain engine (no UI)
 - [ ] Freezed models: `RateProfile` (parses `rate_profiles.json`), `PropertyInput`, `Extra`, `Finance`, `CostBreakdown`, `LoanResult`, `Flag`.
