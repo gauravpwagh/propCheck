@@ -126,19 +126,26 @@ class _WizardBodyState extends ConsumerState<_WizardBody> {
             state.draft.propertyId == null ? l.wizardTitle : l.wizardEditTitle,
           ),
           bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(24),
+            // Grows with the user's text size.
+            preferredSize: Size.fromHeight(
+              16 + MediaQuery.textScalerOf(context).scale(20),
+            ),
             child: Padding(
               padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-              child: Row(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Expanded(
-                    child: LinearProgressIndicator(
-                      value: current / steps.length,
-                      semanticsLabel: l.wizardStepOf(current, steps.length),
+                  LinearProgressIndicator(
+                    value: current / steps.length,
+                    semanticsLabel: l.wizardStepOf(current, steps.length),
+                  ),
+                  const SizedBox(height: 4),
+                  ExcludeSemantics(
+                    child: Text(
+                      l.wizardStepOf(current, steps.length),
+                      style: Theme.of(context).textTheme.bodySmall,
                     ),
                   ),
-                  const SizedBox(width: 12),
-                  Text(l.wizardStepOf(current, steps.length)),
                 ],
               ),
             ),
@@ -225,15 +232,14 @@ class _BottomBar extends ConsumerWidget {
             children: [
               Semantics(
                 liveRegion: true,
-                child: Row(
+                child: Wrap(
+                  alignment: WrapAlignment.spaceBetween,
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  spacing: 8,
                   children: [
-                    Expanded(
-                      child: Text(
-                        isBudget
-                            ? l.wizardRunningMaxPrice
-                            : l.wizardRunningTotal,
-                        style: t.labelLarge,
-                      ),
+                    Text(
+                      isBudget ? l.wizardRunningMaxPrice : l.wizardRunningTotal,
+                      style: t.labelLarge,
                     ),
                     Text(headline, style: t.titleLarge),
                   ],
@@ -241,17 +247,30 @@ class _BottomBar extends ConsumerWidget {
               ),
               const SizedBox(height: 8),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   if (!state.isFirst)
                     TextButton(onPressed: c.back, child: Text(l.commonBack)),
-                  const Spacer(),
-                  if (state.step.skippable)
-                    TextButton(onPressed: c.skip, child: Text(l.commonSkip)),
-                  const SizedBox(width: 8),
-                  FilledButton(
-                    onPressed: canContinue ? c.next : null,
-                    child: Text(
-                      nextIsResult ? l.wizardSeeResult : l.commonNext,
+                  // Stacks the buttons vertically when large text needs it.
+                  Expanded(
+                    child: OverflowBar(
+                      alignment: MainAxisAlignment.end,
+                      overflowAlignment: OverflowBarAlignment.end,
+                      spacing: 8,
+                      overflowSpacing: 4,
+                      children: [
+                        if (state.step.skippable)
+                          TextButton(
+                            onPressed: c.skip,
+                            child: Text(l.commonSkip),
+                          ),
+                        FilledButton(
+                          onPressed: canContinue ? c.next : null,
+                          child: Text(
+                            nextIsResult ? l.wizardSeeResult : l.commonNext,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],

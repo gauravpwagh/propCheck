@@ -61,3 +61,15 @@ flutter analyze
 ```
 
 Release builds: `flutter build appbundle` (Android) and `flutter build ipa` (iOS, on macOS). See [Flutter docs](https://docs.flutter.dev/deployment) for signing.
+
+## Project layout
+| Path | What lives there |
+|---|---|
+| `lib/domain/` | Pure Dart: models, cost engine (`engine/`), guidance filters (`guidance/`) |
+| `lib/data/` | Drift database, repositories, bundled-asset seeding, risk import schema, backup |
+| `lib/features/` | One folder per screen: wizard, result, home, property, compare, risks, settings |
+| `lib/core/` | Money formatting, shared widgets, label lookups |
+| `lib/l10n/app_en.arb` | All user-facing text |
+| `test/` | Golden and edge-case engine tests, repository tests, widget and accessibility tests |
+| `tools/` | Reference engine, edge-case generator, icon generator |
+| `docs/` | Spec, tasks, privacy policy, store listing draft, release steps |

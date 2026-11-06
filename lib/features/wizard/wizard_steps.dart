@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/l10n/labels.dart';
 import '../../core/widgets/number_fields.dart';
 import '../../domain/engine/engine.dart';
 import '../../l10n/gen/app_localizations.dart';
+import '../result/result_view.dart';
 import 'wizard_controller.dart';
 import 'wizard_state.dart';
 
@@ -24,6 +26,22 @@ class WizardStepView extends ConsumerWidget {
         Text(title, style: Theme.of(context).textTheme.headlineSmall),
         const SizedBox(height: 8),
         Text(why, style: Theme.of(context).textTheme.bodyMedium),
+        if (step.infoLines.isNotEmpty)
+          Align(
+            alignment: Alignment.centerLeft,
+            child: TextButton.icon(
+              onPressed: () => showInfoSheet(
+                context,
+                title,
+                [
+                  for (final k in step.infoLines)
+                    '${l.lineLabel(k)}\n${l.lineInfo(k)}',
+                ].join('\n\n'),
+              ),
+              icon: const Icon(Icons.info_outline),
+              label: Text(l.commonLearnMore),
+            ),
+          ),
         const SizedBox(height: 24),
         ..._fields(context, ref, l, draft),
       ],

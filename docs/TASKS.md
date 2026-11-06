@@ -53,7 +53,7 @@ Work top to bottom. Each milestone ends with `flutter analyze` clean and `flutte
 - [x] Backup export/import of all properties (JSON via `share_plus` / `file_picker`).
 
 ## M6 – Polish and beta
-- [ ] Info sheets for every cost item and flag (ARB strings).
-- [ ] Accessibility pass: semantics labels, large text, contrast, dark mode.
-- [ ] App icon, splash, store metadata draft, privacy note (all data on device).
-- [ ] Release builds for Android (AAB) and iOS (TestFlight-ready).
+- [x] Info sheets for every cost item and flag (ARB strings).
+- [x] Accessibility pass: semantics labels, large text, contrast, dark mode.
+- [x] App icon, splash, store metadata draft, privacy note (all data on device).
+- [x] Release builds for Android (AAB) and iOS (TestFlight-ready). AAB builds (debug-signed until `android/key.properties` exists); iOS needs macOS/Xcode to build, steps in `docs/RELEASE.md`.

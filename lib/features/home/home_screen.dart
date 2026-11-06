@@ -162,7 +162,11 @@ class _ToolbarState extends ConsumerState<_Toolbar> {
             ),
             onChanged: c.setQuery,
           ),
-          Row(
+          // Wraps onto two lines at large text sizes.
+          Wrap(
+            alignment: WrapAlignment.spaceBetween,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            spacing: 8,
             children: [
               PopupMenuButton<HomeSort>(
                 tooltip: l.homeSort,
@@ -189,22 +193,21 @@ class _ToolbarState extends ConsumerState<_Toolbar> {
                     children: [
                       const Icon(Icons.sort),
                       const SizedBox(width: 8),
-                      Text(switch (s.sort) {
-                        HomeSort.updated => l.homeSortUpdated,
-                        HomeSort.total => l.homeSortTotal,
-                        HomeSort.psf => l.homeSortPsf,
-                      }),
+                      Flexible(
+                        child: Text(switch (s.sort) {
+                          HomeSort.updated => l.homeSortUpdated,
+                          HomeSort.total => l.homeSortTotal,
+                          HomeSort.psf => l.homeSortPsf,
+                        }),
+                      ),
                     ],
                   ),
                 ),
               ),
-              const Spacer(),
-              Flexible(
-                child: FilterChip(
-                  label: Text(l.homeShowArchived),
-                  selected: s.showArchived,
-                  onSelected: c.setShowArchived,
-                ),
+              FilterChip(
+                label: Text(l.homeShowArchived),
+                selected: s.showArchived,
+                onSelected: c.setShowArchived,
               ),
             ],
           ),

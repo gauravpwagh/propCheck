@@ -29,6 +29,20 @@ enum WizardStep {
   };
 
   bool get skippable => this == financing || this == oneTime;
+
+  /// Cost lines this screen affects, explained in its info sheet.
+  List<String> get infoLines => switch (this) {
+    status => const ['gst'],
+    amount => const ['agreement_value', 'stamp_duty', 'registration'],
+    buyer => const ['stamp_duty'],
+    builderExtras => const ['builder_extras_outside_agreement', 'corpus'],
+    maintenance => const ['advance_maintenance', 'society_transfer'],
+    resaleDetails => const ['brokerage', 'renovation'],
+    ucDetails => const ['pre_emi_interest', 'rent_overlap'],
+    financing => const ['loan_processing', 'mortgage_stamp_duty'],
+    oneTime => const ['legal', 'interiors'],
+    _ => const [],
+  };
 }
 
 /// Everything the wizard is editing.
