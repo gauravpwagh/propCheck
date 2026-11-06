@@ -1124,4 +1124,413 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get risksAllAreas => 'All areas';
+
+  @override
+  String get settingsTitle => 'Settings';
+
+  @override
+  String get settingsRatesSection => 'Rates and assumptions';
+
+  @override
+  String settingsProfileSubtitle(String city, int version, String date) {
+    return '$city · v$version · as of $date';
+  }
+
+  @override
+  String get settingsRates => 'Taxes, fees and charges';
+
+  @override
+  String get settingsLoan => 'Loan assumptions';
+
+  @override
+  String get settingsDefaults => 'Defaults by flat type';
+
+  @override
+  String get settingsThresholds => 'Flag thresholds';
+
+  @override
+  String get settingsResetRates => 'Reset rates to bundled';
+
+  @override
+  String get settingsResetRatesBody =>
+      'This saves the rates shipped with the app as a new version. Saved properties keep the version they were calculated with.';
+
+  @override
+  String get settingsResetDone => 'Rates reset to bundled values';
+
+  @override
+  String get settingsRiskSection => 'Scam and risk data';
+
+  @override
+  String settingsRiskSubtitle(String version, String date, String source) {
+    return 'Schema $version · as of $date · $source';
+  }
+
+  @override
+  String get settingsRiskBundled => 'bundled';
+
+  @override
+  String get settingsRiskImported => 'imported';
+
+  @override
+  String get settingsRiskImport => 'Import risk data (JSON)';
+
+  @override
+  String get settingsRiskRestore => 'Restore bundled risk data';
+
+  @override
+  String get settingsRiskRestored => 'Bundled risk data restored';
+
+  @override
+  String get settingsBackupSection => 'Backup';
+
+  @override
+  String get settingsExport => 'Export all properties';
+
+  @override
+  String get settingsExportHelp =>
+      'Saves a JSON file you can keep or move to another phone.';
+
+  @override
+  String get settingsImport => 'Import properties from backup';
+
+  @override
+  String get settingsImportHelp =>
+      'Adds the properties in a backup file. Existing ones are kept.';
+
+  @override
+  String settingsImported(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count properties imported',
+      one: '1 property imported',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get settingsAboutSection => 'About';
+
+  @override
+  String get settingsPrivacy => 'Your data stays on this phone';
+
+  @override
+  String get settingsPrivacyBody =>
+      'PropCheck works offline. It has no accounts, no analytics and makes no network requests. Properties are stored only on this device unless you export them.';
+
+  @override
+  String get backupInvalidJson => 'This file isn\'t valid JSON.';
+
+  @override
+  String get backupNotABackup => 'This isn\'t a PropCheck backup file.';
+
+  @override
+  String get backupNewerVersion =>
+      'This backup was made by a newer version of PropCheck. Update the app first.';
+
+  @override
+  String get backupDamaged =>
+      'The backup file is damaged and couldn\'t be read.';
+
+  @override
+  String get backupShareSubject => 'PropCheck backup';
+
+  @override
+  String get editorTitle => 'Edit rates';
+
+  @override
+  String editorSaved(int version) {
+    return 'Saved as version $version';
+  }
+
+  @override
+  String get editorAsOf => 'Rates as of (YYYY-MM-DD)';
+
+  @override
+  String get editorInvalid => 'Fix the highlighted fields first.';
+
+  @override
+  String editorPctRange(int max) {
+    return 'Enter a percentage between 0 and $max';
+  }
+
+  @override
+  String get editorFractionRange => 'Enter a value between 0 and 1';
+
+  @override
+  String get editorNonNegative => 'Must be zero or more';
+
+  @override
+  String get editorRatioRange => 'Enter a value between 1 and 3';
+
+  @override
+  String get editorDateFormat => 'Use the format YYYY-MM-DD';
+
+  @override
+  String get editorDiscardTitle => 'Discard changes?';
+
+  @override
+  String get editorDiscard => 'Discard';
+
+  @override
+  String editorVersionNote(int version) {
+    return 'Saving creates version $version. Saved properties keep their own version until you recalculate them.';
+  }
+
+  @override
+  String get editorNoLimit => 'No upper limit';
+
+  @override
+  String get groupStampRegistration => 'Stamp duty and registration';
+
+  @override
+  String get groupGst => 'GST';
+
+  @override
+  String get groupTds => 'TDS';
+
+  @override
+  String get groupFees => 'Fees and charges';
+
+  @override
+  String get groupMaintenance => 'Maintenance';
+
+  @override
+  String get groupRenovation => 'Renovation (₹ per sq ft by building age)';
+
+  @override
+  String get groupLoanRates => 'Interest and eligibility';
+
+  @override
+  String get groupLoanTenure => 'Tenure limits';
+
+  @override
+  String get groupLtv => 'Loan-to-value slabs';
+
+  @override
+  String get groupInteriors => 'Interiors budget';
+
+  @override
+  String get groupCarpet => 'Typical carpet area';
+
+  @override
+  String get groupWizard => 'Other pre-fills';
+
+  @override
+  String get groupThresholds => 'When to raise flags';
+
+  @override
+  String get fieldStampMale => 'Stamp duty, man (%)';
+
+  @override
+  String get fieldStampFemale => 'Stamp duty, woman (%)';
+
+  @override
+  String get fieldStampJoint => 'Stamp duty, joint (%)';
+
+  @override
+  String get fieldRegistrationPct => 'Registration (%)';
+
+  @override
+  String get fieldRegistrationCap => 'Registration cap (₹)';
+
+  @override
+  String get fieldGstUcStandard => 'Under construction, standard (%)';
+
+  @override
+  String get fieldGstUcAffordable => 'Under construction, affordable (%)';
+
+  @override
+  String get fieldGstReady => 'Ready possession (%)';
+
+  @override
+  String get fieldGstResale => 'Resale (%)';
+
+  @override
+  String get fieldAffordableSqm => 'Affordable housing: max carpet (m²)';
+
+  @override
+  String get fieldAffordableValue => 'Affordable housing: max value (₹)';
+
+  @override
+  String get fieldTdsPct => 'TDS rate (%)';
+
+  @override
+  String get fieldTdsThreshold => 'TDS applies from (₹)';
+
+  @override
+  String get fieldBrokerage => 'Brokerage (%)';
+
+  @override
+  String get fieldServiceGst => 'GST on services (%)';
+
+  @override
+  String get fieldTransferFee => 'Society transfer fee (₹)';
+
+  @override
+  String get fieldLegal => 'Lawyer fees (₹)';
+
+  @override
+  String get fieldLoanProcessing => 'Loan processing fee (%)';
+
+  @override
+  String get fieldMortgagePct => 'Stamp duty on loan (%)';
+
+  @override
+  String get fieldMortgageCap => 'Stamp duty on loan, cap (₹)';
+
+  @override
+  String get fieldPreEmiFraction =>
+      'Average share of loan disbursed before possession (0–1)';
+
+  @override
+  String get fieldBuiltupRatio => 'Built-up ÷ carpet ratio';
+
+  @override
+  String get fieldMaintenanceRate => 'Maintenance (₹ per sq ft per month)';
+
+  @override
+  String get fieldMonthsUc => 'Advance months, under construction';
+
+  @override
+  String get fieldMonthsReady => 'Advance months, ready possession';
+
+  @override
+  String get fieldMonthsResale => 'Advance months, resale';
+
+  @override
+  String fieldRenovationBand(int min, int max) {
+    return 'Age $min–$max years (₹/sq ft)';
+  }
+
+  @override
+  String get fieldInterest => 'Interest rate (%)';
+
+  @override
+  String get fieldFoir => 'Share of income for EMIs (%)';
+
+  @override
+  String get fieldHaircut => 'Bank valuation haircut (%)';
+
+  @override
+  String get fieldMaxTenure => 'Maximum tenure (years)';
+
+  @override
+  String get fieldRetireSalaried => 'Retirement age, salaried';
+
+  @override
+  String get fieldRetireSelf => 'Retirement age, self-employed';
+
+  @override
+  String get fieldBuildingLife => 'Assumed building life (years)';
+
+  @override
+  String get fieldBuildingBuffer => 'Building life buffer (years)';
+
+  @override
+  String fieldLtvCap(int n) {
+    return 'Slab $n: up to (₹)';
+  }
+
+  @override
+  String fieldLtvPct(int n) {
+    return 'Slab $n: loan-to-value (%)';
+  }
+
+  @override
+  String fieldInteriorsType(String type) {
+    return '$type (₹)';
+  }
+
+  @override
+  String fieldCarpetType(String type) {
+    return '$type (sq ft)';
+  }
+
+  @override
+  String get fieldMonthsToPossession => 'Months to possession';
+
+  @override
+  String get fieldBuyerAge => 'Buyer age';
+
+  @override
+  String get fieldTenure => 'Loan tenure (years)';
+
+  @override
+  String get fieldOldBuilding => 'Old building from (years)';
+
+  @override
+  String get fieldVeryOldBuilding => 'Very old building from (years)';
+
+  @override
+  String get fieldGstEdgeBand => 'GST edge band above the limit (₹)';
+
+  @override
+  String get fieldHighLoading => 'High loading above (%)';
+
+  @override
+  String get fieldBelowMarket => 'Below-market ratio (0–1)';
+
+  @override
+  String get importTitle => 'Import risk data';
+
+  @override
+  String get importHelp =>
+      'Paste the JSON from the survey prompt, or choose a file. It must follow schema 1.0.';
+
+  @override
+  String get importPasteLabel => 'Risk data JSON';
+
+  @override
+  String get importChooseFile => 'Choose file';
+
+  @override
+  String get importValidate => 'Validate and import';
+
+  @override
+  String importInvalidJson(String error) {
+    return 'This is not valid JSON: $error';
+  }
+
+  @override
+  String importProblems(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count problems found',
+      one: '1 problem found',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get importRoot => '(whole file)';
+
+  @override
+  String importDone(String date) {
+    return 'Risk data imported (as of $date)';
+  }
+
+  @override
+  String get importSnapshotTitle => 'Update default rates?';
+
+  @override
+  String importSnapshotBody(String date) {
+    return 'This file includes rates as of $date. Use them as your defaults? Saved properties keep their current rates until you recalculate.';
+  }
+
+  @override
+  String get importSnapshotApply => 'Update rates';
+
+  @override
+  String get importSnapshotSkip => 'Keep current rates';
+
+  @override
+  String importSnapshotApplied(int version) {
+    return 'Rates updated to version $version';
+  }
+
+  @override
+  String get importReadError => 'Couldn\'t read that file.';
 }

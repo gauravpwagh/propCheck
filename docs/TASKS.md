@@ -47,10 +47,10 @@ Work top to bottom. Each milestone ends with `flutter analyze` clean and `flutte
 - [x] Staleness banner when risk `as_of` > 6 months.
 
 ## M5 – Settings, import, backup
-- [ ] Rate profile editor with validation, reset to bundled, version bump on save, "Recalculate with current rates" on property detail.
-- [ ] Loan assumptions, defaults and thresholds editors.
-- [ ] Risk JSON import (paste or file), schema validation with field-level error messages, restore bundled, optional rate_snapshot offer.
-- [ ] Backup export/import of all properties (JSON via `share_plus` / `file_picker`).
+- [x] Rate profile editor with validation, reset to bundled, version bump on save, "Recalculate with current rates" on property detail.
+- [x] Loan assumptions, defaults and thresholds editors.
+- [x] Risk JSON import (paste or file), schema validation with field-level error messages, restore bundled, optional rate_snapshot offer.
+- [x] Backup export/import of all properties (JSON via `share_plus` / `file_picker`).
 
 ## M6 – Polish and beta
 - [ ] Info sheets for every cost item and flag (ARB strings).

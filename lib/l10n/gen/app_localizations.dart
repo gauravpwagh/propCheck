@@ -2073,6 +2073,720 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'All areas'**
   String get risksAllAreas;
+
+  /// No description provided for @settingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settingsTitle;
+
+  /// No description provided for @settingsRatesSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Rates and assumptions'**
+  String get settingsRatesSection;
+
+  /// No description provided for @settingsProfileSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'{city} · v{version} · as of {date}'**
+  String settingsProfileSubtitle(String city, int version, String date);
+
+  /// No description provided for @settingsRates.
+  ///
+  /// In en, this message translates to:
+  /// **'Taxes, fees and charges'**
+  String get settingsRates;
+
+  /// No description provided for @settingsLoan.
+  ///
+  /// In en, this message translates to:
+  /// **'Loan assumptions'**
+  String get settingsLoan;
+
+  /// No description provided for @settingsDefaults.
+  ///
+  /// In en, this message translates to:
+  /// **'Defaults by flat type'**
+  String get settingsDefaults;
+
+  /// No description provided for @settingsThresholds.
+  ///
+  /// In en, this message translates to:
+  /// **'Flag thresholds'**
+  String get settingsThresholds;
+
+  /// No description provided for @settingsResetRates.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset rates to bundled'**
+  String get settingsResetRates;
+
+  /// No description provided for @settingsResetRatesBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This saves the rates shipped with the app as a new version. Saved properties keep the version they were calculated with.'**
+  String get settingsResetRatesBody;
+
+  /// No description provided for @settingsResetDone.
+  ///
+  /// In en, this message translates to:
+  /// **'Rates reset to bundled values'**
+  String get settingsResetDone;
+
+  /// No description provided for @settingsRiskSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Scam and risk data'**
+  String get settingsRiskSection;
+
+  /// No description provided for @settingsRiskSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Schema {version} · as of {date} · {source}'**
+  String settingsRiskSubtitle(String version, String date, String source);
+
+  /// No description provided for @settingsRiskBundled.
+  ///
+  /// In en, this message translates to:
+  /// **'bundled'**
+  String get settingsRiskBundled;
+
+  /// No description provided for @settingsRiskImported.
+  ///
+  /// In en, this message translates to:
+  /// **'imported'**
+  String get settingsRiskImported;
+
+  /// No description provided for @settingsRiskImport.
+  ///
+  /// In en, this message translates to:
+  /// **'Import risk data (JSON)'**
+  String get settingsRiskImport;
+
+  /// No description provided for @settingsRiskRestore.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore bundled risk data'**
+  String get settingsRiskRestore;
+
+  /// No description provided for @settingsRiskRestored.
+  ///
+  /// In en, this message translates to:
+  /// **'Bundled risk data restored'**
+  String get settingsRiskRestored;
+
+  /// No description provided for @settingsBackupSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Backup'**
+  String get settingsBackupSection;
+
+  /// No description provided for @settingsExport.
+  ///
+  /// In en, this message translates to:
+  /// **'Export all properties'**
+  String get settingsExport;
+
+  /// No description provided for @settingsExportHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'Saves a JSON file you can keep or move to another phone.'**
+  String get settingsExportHelp;
+
+  /// No description provided for @settingsImport.
+  ///
+  /// In en, this message translates to:
+  /// **'Import properties from backup'**
+  String get settingsImport;
+
+  /// No description provided for @settingsImportHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'Adds the properties in a backup file. Existing ones are kept.'**
+  String get settingsImportHelp;
+
+  /// No description provided for @settingsImported.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 property imported} other{{count} properties imported}}'**
+  String settingsImported(int count);
+
+  /// No description provided for @settingsAboutSection.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get settingsAboutSection;
+
+  /// No description provided for @settingsPrivacy.
+  ///
+  /// In en, this message translates to:
+  /// **'Your data stays on this phone'**
+  String get settingsPrivacy;
+
+  /// No description provided for @settingsPrivacyBody.
+  ///
+  /// In en, this message translates to:
+  /// **'PropCheck works offline. It has no accounts, no analytics and makes no network requests. Properties are stored only on this device unless you export them.'**
+  String get settingsPrivacyBody;
+
+  /// No description provided for @backupInvalidJson.
+  ///
+  /// In en, this message translates to:
+  /// **'This file isn\'t valid JSON.'**
+  String get backupInvalidJson;
+
+  /// No description provided for @backupNotABackup.
+  ///
+  /// In en, this message translates to:
+  /// **'This isn\'t a PropCheck backup file.'**
+  String get backupNotABackup;
+
+  /// No description provided for @backupNewerVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'This backup was made by a newer version of PropCheck. Update the app first.'**
+  String get backupNewerVersion;
+
+  /// No description provided for @backupDamaged.
+  ///
+  /// In en, this message translates to:
+  /// **'The backup file is damaged and couldn\'t be read.'**
+  String get backupDamaged;
+
+  /// No description provided for @backupShareSubject.
+  ///
+  /// In en, this message translates to:
+  /// **'PropCheck backup'**
+  String get backupShareSubject;
+
+  /// No description provided for @editorTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit rates'**
+  String get editorTitle;
+
+  /// No description provided for @editorSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved as version {version}'**
+  String editorSaved(int version);
+
+  /// No description provided for @editorAsOf.
+  ///
+  /// In en, this message translates to:
+  /// **'Rates as of (YYYY-MM-DD)'**
+  String get editorAsOf;
+
+  /// No description provided for @editorInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Fix the highlighted fields first.'**
+  String get editorInvalid;
+
+  /// No description provided for @editorPctRange.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a percentage between 0 and {max}'**
+  String editorPctRange(int max);
+
+  /// No description provided for @editorFractionRange.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a value between 0 and 1'**
+  String get editorFractionRange;
+
+  /// No description provided for @editorNonNegative.
+  ///
+  /// In en, this message translates to:
+  /// **'Must be zero or more'**
+  String get editorNonNegative;
+
+  /// No description provided for @editorRatioRange.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a value between 1 and 3'**
+  String get editorRatioRange;
+
+  /// No description provided for @editorDateFormat.
+  ///
+  /// In en, this message translates to:
+  /// **'Use the format YYYY-MM-DD'**
+  String get editorDateFormat;
+
+  /// No description provided for @editorDiscardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Discard changes?'**
+  String get editorDiscardTitle;
+
+  /// No description provided for @editorDiscard.
+  ///
+  /// In en, this message translates to:
+  /// **'Discard'**
+  String get editorDiscard;
+
+  /// No description provided for @editorVersionNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Saving creates version {version}. Saved properties keep their own version until you recalculate them.'**
+  String editorVersionNote(int version);
+
+  /// No description provided for @editorNoLimit.
+  ///
+  /// In en, this message translates to:
+  /// **'No upper limit'**
+  String get editorNoLimit;
+
+  /// No description provided for @groupStampRegistration.
+  ///
+  /// In en, this message translates to:
+  /// **'Stamp duty and registration'**
+  String get groupStampRegistration;
+
+  /// No description provided for @groupGst.
+  ///
+  /// In en, this message translates to:
+  /// **'GST'**
+  String get groupGst;
+
+  /// No description provided for @groupTds.
+  ///
+  /// In en, this message translates to:
+  /// **'TDS'**
+  String get groupTds;
+
+  /// No description provided for @groupFees.
+  ///
+  /// In en, this message translates to:
+  /// **'Fees and charges'**
+  String get groupFees;
+
+  /// No description provided for @groupMaintenance.
+  ///
+  /// In en, this message translates to:
+  /// **'Maintenance'**
+  String get groupMaintenance;
+
+  /// No description provided for @groupRenovation.
+  ///
+  /// In en, this message translates to:
+  /// **'Renovation (₹ per sq ft by building age)'**
+  String get groupRenovation;
+
+  /// No description provided for @groupLoanRates.
+  ///
+  /// In en, this message translates to:
+  /// **'Interest and eligibility'**
+  String get groupLoanRates;
+
+  /// No description provided for @groupLoanTenure.
+  ///
+  /// In en, this message translates to:
+  /// **'Tenure limits'**
+  String get groupLoanTenure;
+
+  /// No description provided for @groupLtv.
+  ///
+  /// In en, this message translates to:
+  /// **'Loan-to-value slabs'**
+  String get groupLtv;
+
+  /// No description provided for @groupInteriors.
+  ///
+  /// In en, this message translates to:
+  /// **'Interiors budget'**
+  String get groupInteriors;
+
+  /// No description provided for @groupCarpet.
+  ///
+  /// In en, this message translates to:
+  /// **'Typical carpet area'**
+  String get groupCarpet;
+
+  /// No description provided for @groupWizard.
+  ///
+  /// In en, this message translates to:
+  /// **'Other pre-fills'**
+  String get groupWizard;
+
+  /// No description provided for @groupThresholds.
+  ///
+  /// In en, this message translates to:
+  /// **'When to raise flags'**
+  String get groupThresholds;
+
+  /// No description provided for @fieldStampMale.
+  ///
+  /// In en, this message translates to:
+  /// **'Stamp duty, man (%)'**
+  String get fieldStampMale;
+
+  /// No description provided for @fieldStampFemale.
+  ///
+  /// In en, this message translates to:
+  /// **'Stamp duty, woman (%)'**
+  String get fieldStampFemale;
+
+  /// No description provided for @fieldStampJoint.
+  ///
+  /// In en, this message translates to:
+  /// **'Stamp duty, joint (%)'**
+  String get fieldStampJoint;
+
+  /// No description provided for @fieldRegistrationPct.
+  ///
+  /// In en, this message translates to:
+  /// **'Registration (%)'**
+  String get fieldRegistrationPct;
+
+  /// No description provided for @fieldRegistrationCap.
+  ///
+  /// In en, this message translates to:
+  /// **'Registration cap (₹)'**
+  String get fieldRegistrationCap;
+
+  /// No description provided for @fieldGstUcStandard.
+  ///
+  /// In en, this message translates to:
+  /// **'Under construction, standard (%)'**
+  String get fieldGstUcStandard;
+
+  /// No description provided for @fieldGstUcAffordable.
+  ///
+  /// In en, this message translates to:
+  /// **'Under construction, affordable (%)'**
+  String get fieldGstUcAffordable;
+
+  /// No description provided for @fieldGstReady.
+  ///
+  /// In en, this message translates to:
+  /// **'Ready possession (%)'**
+  String get fieldGstReady;
+
+  /// No description provided for @fieldGstResale.
+  ///
+  /// In en, this message translates to:
+  /// **'Resale (%)'**
+  String get fieldGstResale;
+
+  /// No description provided for @fieldAffordableSqm.
+  ///
+  /// In en, this message translates to:
+  /// **'Affordable housing: max carpet (m²)'**
+  String get fieldAffordableSqm;
+
+  /// No description provided for @fieldAffordableValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Affordable housing: max value (₹)'**
+  String get fieldAffordableValue;
+
+  /// No description provided for @fieldTdsPct.
+  ///
+  /// In en, this message translates to:
+  /// **'TDS rate (%)'**
+  String get fieldTdsPct;
+
+  /// No description provided for @fieldTdsThreshold.
+  ///
+  /// In en, this message translates to:
+  /// **'TDS applies from (₹)'**
+  String get fieldTdsThreshold;
+
+  /// No description provided for @fieldBrokerage.
+  ///
+  /// In en, this message translates to:
+  /// **'Brokerage (%)'**
+  String get fieldBrokerage;
+
+  /// No description provided for @fieldServiceGst.
+  ///
+  /// In en, this message translates to:
+  /// **'GST on services (%)'**
+  String get fieldServiceGst;
+
+  /// No description provided for @fieldTransferFee.
+  ///
+  /// In en, this message translates to:
+  /// **'Society transfer fee (₹)'**
+  String get fieldTransferFee;
+
+  /// No description provided for @fieldLegal.
+  ///
+  /// In en, this message translates to:
+  /// **'Lawyer fees (₹)'**
+  String get fieldLegal;
+
+  /// No description provided for @fieldLoanProcessing.
+  ///
+  /// In en, this message translates to:
+  /// **'Loan processing fee (%)'**
+  String get fieldLoanProcessing;
+
+  /// No description provided for @fieldMortgagePct.
+  ///
+  /// In en, this message translates to:
+  /// **'Stamp duty on loan (%)'**
+  String get fieldMortgagePct;
+
+  /// No description provided for @fieldMortgageCap.
+  ///
+  /// In en, this message translates to:
+  /// **'Stamp duty on loan, cap (₹)'**
+  String get fieldMortgageCap;
+
+  /// No description provided for @fieldPreEmiFraction.
+  ///
+  /// In en, this message translates to:
+  /// **'Average share of loan disbursed before possession (0–1)'**
+  String get fieldPreEmiFraction;
+
+  /// No description provided for @fieldBuiltupRatio.
+  ///
+  /// In en, this message translates to:
+  /// **'Built-up ÷ carpet ratio'**
+  String get fieldBuiltupRatio;
+
+  /// No description provided for @fieldMaintenanceRate.
+  ///
+  /// In en, this message translates to:
+  /// **'Maintenance (₹ per sq ft per month)'**
+  String get fieldMaintenanceRate;
+
+  /// No description provided for @fieldMonthsUc.
+  ///
+  /// In en, this message translates to:
+  /// **'Advance months, under construction'**
+  String get fieldMonthsUc;
+
+  /// No description provided for @fieldMonthsReady.
+  ///
+  /// In en, this message translates to:
+  /// **'Advance months, ready possession'**
+  String get fieldMonthsReady;
+
+  /// No description provided for @fieldMonthsResale.
+  ///
+  /// In en, this message translates to:
+  /// **'Advance months, resale'**
+  String get fieldMonthsResale;
+
+  /// No description provided for @fieldRenovationBand.
+  ///
+  /// In en, this message translates to:
+  /// **'Age {min}–{max} years (₹/sq ft)'**
+  String fieldRenovationBand(int min, int max);
+
+  /// No description provided for @fieldInterest.
+  ///
+  /// In en, this message translates to:
+  /// **'Interest rate (%)'**
+  String get fieldInterest;
+
+  /// No description provided for @fieldFoir.
+  ///
+  /// In en, this message translates to:
+  /// **'Share of income for EMIs (%)'**
+  String get fieldFoir;
+
+  /// No description provided for @fieldHaircut.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank valuation haircut (%)'**
+  String get fieldHaircut;
+
+  /// No description provided for @fieldMaxTenure.
+  ///
+  /// In en, this message translates to:
+  /// **'Maximum tenure (years)'**
+  String get fieldMaxTenure;
+
+  /// No description provided for @fieldRetireSalaried.
+  ///
+  /// In en, this message translates to:
+  /// **'Retirement age, salaried'**
+  String get fieldRetireSalaried;
+
+  /// No description provided for @fieldRetireSelf.
+  ///
+  /// In en, this message translates to:
+  /// **'Retirement age, self-employed'**
+  String get fieldRetireSelf;
+
+  /// No description provided for @fieldBuildingLife.
+  ///
+  /// In en, this message translates to:
+  /// **'Assumed building life (years)'**
+  String get fieldBuildingLife;
+
+  /// No description provided for @fieldBuildingBuffer.
+  ///
+  /// In en, this message translates to:
+  /// **'Building life buffer (years)'**
+  String get fieldBuildingBuffer;
+
+  /// No description provided for @fieldLtvCap.
+  ///
+  /// In en, this message translates to:
+  /// **'Slab {n}: up to (₹)'**
+  String fieldLtvCap(int n);
+
+  /// No description provided for @fieldLtvPct.
+  ///
+  /// In en, this message translates to:
+  /// **'Slab {n}: loan-to-value (%)'**
+  String fieldLtvPct(int n);
+
+  /// No description provided for @fieldInteriorsType.
+  ///
+  /// In en, this message translates to:
+  /// **'{type} (₹)'**
+  String fieldInteriorsType(String type);
+
+  /// No description provided for @fieldCarpetType.
+  ///
+  /// In en, this message translates to:
+  /// **'{type} (sq ft)'**
+  String fieldCarpetType(String type);
+
+  /// No description provided for @fieldMonthsToPossession.
+  ///
+  /// In en, this message translates to:
+  /// **'Months to possession'**
+  String get fieldMonthsToPossession;
+
+  /// No description provided for @fieldBuyerAge.
+  ///
+  /// In en, this message translates to:
+  /// **'Buyer age'**
+  String get fieldBuyerAge;
+
+  /// No description provided for @fieldTenure.
+  ///
+  /// In en, this message translates to:
+  /// **'Loan tenure (years)'**
+  String get fieldTenure;
+
+  /// No description provided for @fieldOldBuilding.
+  ///
+  /// In en, this message translates to:
+  /// **'Old building from (years)'**
+  String get fieldOldBuilding;
+
+  /// No description provided for @fieldVeryOldBuilding.
+  ///
+  /// In en, this message translates to:
+  /// **'Very old building from (years)'**
+  String get fieldVeryOldBuilding;
+
+  /// No description provided for @fieldGstEdgeBand.
+  ///
+  /// In en, this message translates to:
+  /// **'GST edge band above the limit (₹)'**
+  String get fieldGstEdgeBand;
+
+  /// No description provided for @fieldHighLoading.
+  ///
+  /// In en, this message translates to:
+  /// **'High loading above (%)'**
+  String get fieldHighLoading;
+
+  /// No description provided for @fieldBelowMarket.
+  ///
+  /// In en, this message translates to:
+  /// **'Below-market ratio (0–1)'**
+  String get fieldBelowMarket;
+
+  /// No description provided for @importTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Import risk data'**
+  String get importTitle;
+
+  /// No description provided for @importHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'Paste the JSON from the survey prompt, or choose a file. It must follow schema 1.0.'**
+  String get importHelp;
+
+  /// No description provided for @importPasteLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Risk data JSON'**
+  String get importPasteLabel;
+
+  /// No description provided for @importChooseFile.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose file'**
+  String get importChooseFile;
+
+  /// No description provided for @importValidate.
+  ///
+  /// In en, this message translates to:
+  /// **'Validate and import'**
+  String get importValidate;
+
+  /// No description provided for @importInvalidJson.
+  ///
+  /// In en, this message translates to:
+  /// **'This is not valid JSON: {error}'**
+  String importInvalidJson(String error);
+
+  /// No description provided for @importProblems.
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 problem found} other{{count} problems found}}'**
+  String importProblems(int count);
+
+  /// No description provided for @importRoot.
+  ///
+  /// In en, this message translates to:
+  /// **'(whole file)'**
+  String get importRoot;
+
+  /// No description provided for @importDone.
+  ///
+  /// In en, this message translates to:
+  /// **'Risk data imported (as of {date})'**
+  String importDone(String date);
+
+  /// No description provided for @importSnapshotTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Update default rates?'**
+  String get importSnapshotTitle;
+
+  /// No description provided for @importSnapshotBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This file includes rates as of {date}. Use them as your defaults? Saved properties keep their current rates until you recalculate.'**
+  String importSnapshotBody(String date);
+
+  /// No description provided for @importSnapshotApply.
+  ///
+  /// In en, this message translates to:
+  /// **'Update rates'**
+  String get importSnapshotApply;
+
+  /// No description provided for @importSnapshotSkip.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep current rates'**
+  String get importSnapshotSkip;
+
+  /// No description provided for @importSnapshotApplied.
+  ///
+  /// In en, this message translates to:
+  /// **'Rates updated to version {version}'**
+  String importSnapshotApplied(int version);
+
+  /// No description provided for @importReadError.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t read that file.'**
+  String get importReadError;
 }
 
 class _AppLocalizationsDelegate
