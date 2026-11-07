@@ -34,6 +34,27 @@ void main() {
     await h.dispose(tester);
   });
 
+  testWidgets('tapping an input section edits that screen', (tester) async {
+    final h = AppHarness();
+    final id = await h.saveGolden(tester, 0, name: 'Andheri resale');
+    await h.pump(tester, location: '/property/$id');
+
+    final section = find.text('Home loan');
+    await tester.scrollUntilVisible(
+      section,
+      200,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await h.settle(tester);
+    await tester.tap(section);
+    await h.settle(tester);
+
+    expect(find.text('Edit estimate'), findsOneWidget);
+    expect(find.text('New estimate'), findsNothing);
+    expect(find.textContaining('Step 1 of'), findsNothing);
+    await h.dispose(tester);
+  });
+
   testWidgets('compare aligns rows and highlights best value', (tester) async {
     final h = AppHarness();
     final a = await h.saveGolden(tester, 0, name: 'Flat A');
