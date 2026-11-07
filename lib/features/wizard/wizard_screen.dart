@@ -102,11 +102,14 @@ class _WizardBodyState extends ConsumerState<_WizardBody> {
 
   @override
   Widget build(BuildContext context) {
+    // Watch before the loading check: the controller is auto-disposed, and
+    // a saved property loaded into it while nothing listens would be lost,
+    // reopening the wizard as a new estimate.
+    final state = ref.watch(wizardControllerProvider);
     if (!_ready) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
     final l = AppLocalizations.of(context);
-    final state = ref.watch(wizardControllerProvider);
     final c = ref.read(wizardControllerProvider.notifier);
     final outcome = ref.watch(wizardOutcomeProvider);
     final guidance = state.isResult
