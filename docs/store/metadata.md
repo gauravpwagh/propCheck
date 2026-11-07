@@ -65,3 +65,6 @@ Everyone / 4+. No user-generated content, no ads, no in-app purchases.
 
 ## Release notes (1.0.0)
 First release: full cost estimate, budget mode, loan eligibility, save and compare, buying checklist and Mumbai scam patterns. Works offline.
+
+## Release notes (1.0.1)
+Fixed: tapping a section of a saved property's inputs now opens that section for editing instead of starting a new estimate. Added a hint on the loan card when no income is entered.

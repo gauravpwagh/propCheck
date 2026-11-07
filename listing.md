@@ -9,7 +9,7 @@ Values to paste into Google Play Console and App Store Connect. Full listing tex
 | Android package name (applicationId) | `io.github.gauravpwagh.propcheck` |
 | iOS bundle ID | `io.github.gauravpwagh.propcheck` |
 | Dart package | `prop_check` |
-| Version | 1.0.0 (build 1) |
+| Version | 1.0.1 (build 2) |
 
 The package name and bundle ID can't be changed after the first upload.
 
